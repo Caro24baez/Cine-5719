@@ -31,7 +31,7 @@ CREATE TABLE Sala
 (
 	idSala TINYINT NOT NULL,
 	piso TINYINT NOT NULL,
-	capacidad TINYINT NOT NULL,
+	capacidad SMALLINT NOT NULL,
 	PRIMARY KEY (idSala)
 ) 
 ;
@@ -39,7 +39,7 @@ CREATE TABLE Sala
 
 CREATE TABLE Proyeccion
 (
-	idProyeccion INTEGER NOT NULL,
+	idProyeccion SMALLINT NOT NULL,
 	idPelicula SMALLINT NOT NULL,
 	fechaHora DATETIME NOT NULL,
 	idSala INTEGER NOT NULL,
@@ -59,8 +59,6 @@ CREATE TABLE Pelicula
 	PRIMARY KEY (idPelicula)
 ) 
 ;
-
-
 
 
 
