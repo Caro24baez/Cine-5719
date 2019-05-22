@@ -42,7 +42,7 @@ CREATE TABLE Proyeccion
 	idProyeccion SMALLINT NOT NULL,
 	idPelicula SMALLINT NOT NULL,
 	fechaHora DATETIME NOT NULL,
-	idSala INTEGER NOT NULL,
+	idSala TINYINT NOT NULL,
 	idEntrada INTEGER NOT NULL,
 	PRIMARY KEY (idProyeccion),
 	KEY (idEntrada),
