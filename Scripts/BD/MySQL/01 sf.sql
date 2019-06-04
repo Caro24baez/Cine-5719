@@ -8,7 +8,7 @@ BEGIN
     SELECT count(idEntrada) INTO entrada
     FROM Proyeccion  
     WHERE idPelicula = unidPelicula
-    AND fechaHora BETWEEN fechaInferior AND fechSuperior;
+    AND fechaHora BETWEEN fechaInferior AND fechaSuperior;
     
     
 	RETURN entrada;
@@ -24,7 +24,7 @@ CREATE FUNCTION entradasDisponibles(unIdProyeccion SMALLINT)
 BEGIN 
 	DECLARE entradaDisponible INT;
     
-    SELECT (capacidadSala - cantidadEntradasVendidas) INTO EntradaDisponible
+    SELECT (capacidadSala - cantidadEntradasVendidas) INTO entradaDisponible
     FROM Proyeccion P
     INNER JOIN Entrada E
 		ON P.idEntrada = E.idEntrada
