@@ -14,6 +14,6 @@ namespace Cine
 
         [ForeignKey("idGenero"), Required]
         public byte Genero { get; set; }
-        PeliculaGenero() { }
+        public PeliculaGenero() { }
     }
 }
