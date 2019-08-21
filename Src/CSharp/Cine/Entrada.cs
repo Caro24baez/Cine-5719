@@ -6,5 +6,6 @@ namespace Cine
 {
     class Entrada
     {
+
     }
 }
