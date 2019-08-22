@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Cine
 {
+    [Table ("Pelicula")]
     public class Pelicula
     {
         [Key, Column("idPelicula"), Required]

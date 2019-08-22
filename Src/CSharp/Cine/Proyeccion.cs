@@ -9,7 +9,7 @@ namespace Cine
     [Table("Proyeccion")]
     public class Proyeccion
     {
-       
+
         [Key, Column("idProyeccion")]
         public short IdProyeccion { get; set; }
         [ForeignKey("idPelicula"), Required]
@@ -17,7 +17,7 @@ namespace Cine
         [Column("fechaHora")]
         public DateTime FechaHora { get; set; }
         [Column("idSala")]
-        public byte IdSala { get; set; }
+        public byte Sala { get; set; }
         [ForeignKey("idEntrada"), Required]
         public Entrada Entrada { get; set; }
 
