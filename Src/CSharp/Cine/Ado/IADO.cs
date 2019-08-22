@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Cine.Ado
 {
-    interface IADO
+    public interface IADO
     {
+     #
     }
 }

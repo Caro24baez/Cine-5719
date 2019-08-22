@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine
 {
     [Table("Entrada")]
-    class Entrada
+    public class Entrada
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("idEntrada")]
