@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 
 namespace Cine.Ado
