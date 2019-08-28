@@ -6,6 +6,6 @@ namespace Cine.Ado
 {
     public interface IADO
     {
-     #
+     
     }
 }
