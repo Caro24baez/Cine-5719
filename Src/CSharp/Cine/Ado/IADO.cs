@@ -6,24 +6,22 @@ namespace Cine.Ado
 {
     public interface IADO
     {
-<<<<<<< HEAD
-     
-=======
+
         #region Pelicula
         void agregarPelicula(Pelicula pelicula);
-        List<Pelicula> obtenerPelicula();
+        List<Pelicula> obtenerPeliculas();
 
         #endregion
 
         #region Genero
         void agregarGenero(Genero genero);
-        List<Genero> obtenerGenero();
+        List<Genero> obtenerGeneros();
         #endregion
 
         #region Entrada
         void agregarEntrada(Entrada entrada);
         void actualizarEntrada(Entrada entrada);
-        List<Entrada> obtenerEntrada();
+        List<Entrada> obtenerEntradas();
         List<Proyeccion> proyeccionDe(Entrada entrada);
         #endregion
 
@@ -34,8 +32,8 @@ namespace Cine.Ado
 
         #region Proyeccion
         void agregarProyeccion(Proyeccion proyeccion);
-        List<Proyeccion> obtenerProyeccion();
+        List<Proyeccion> obtenerProyecciones();
         #endregion
->>>>>>> 0a615e7092958db78254ea7e26fabe09cf66bc10
+
     }
 }
