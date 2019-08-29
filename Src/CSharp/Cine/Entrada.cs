@@ -13,6 +13,9 @@ namespace Cine
         [Key, Column("idEntrada")]
         public int Id { get; set; }
 
+        [ForeignKey("idProyeccion"), Required]
+        public Proyeccion Proyeccion { get; set; }
+
         [Column("numeroEntrada"), Required]
         public int NumeroEntrada { get; set; }
 
@@ -21,6 +24,7 @@ namespace Cine
 
         [Column("valor"), Required]
         public int Valor { get; set; }
+        
 
         public Entrada() { }
 
