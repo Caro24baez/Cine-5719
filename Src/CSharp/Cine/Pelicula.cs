@@ -15,11 +15,16 @@ namespace Cine
         public string Nombre { get; set; }
         [Column("fechaLanzamiento"), Required]
         public DateTime FechaLanzamiento { get; set; }
-        public Pelicula() { }
+        public List<Proyeccion> Proyecciones { get; set; }
+        public Pelicula()
+        {
+            Proyecciones = new List<Proyeccion>();
+        }
         public Pelicula(string nombre)
         {
             Nombre = nombre;
         }
+
 
     }
 }
