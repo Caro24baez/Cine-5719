@@ -6,7 +6,7 @@ using System;
 
 namespace Cine.Ado
 {
-    public class MySQLADo :DbContext, IADO
+    public class MySQLADo : DbContext, IADO
     {
         public DbSet<Entrada> Entradas { get; set; }
         public DbSet<Genero> Generos { get; set; }
@@ -38,7 +38,7 @@ namespace Cine.Ado
             SaveChanges();
         }
 
-        
+
         public void actualizarEntrada(Entrada entrada)
         {
             this.Update<Entrada>(entrada);
@@ -57,7 +57,7 @@ namespace Cine.Ado
             SaveChanges();
         }
 
-        
+
 
         public List<Proyeccion> obtenerProyecciones() => Proyecciones.ToList();
 
@@ -72,6 +72,9 @@ namespace Cine.Ado
 
         public List<Pelicula> obtenerPeliculas() => Peliculas.ToList();
 
-        
+        public List<Genero> obtenerGenero() => Generos.ToList();
+        {
+
+        }
     }
 }
