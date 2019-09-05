@@ -25,8 +25,13 @@ namespace Cine
         [Column("valor"), Required]
         public int Valor { get; set; }
         
+        public List<Proyeccion> Proyecciones { get; set; }
+        //public Entrada() { }
 
-        public Entrada() { }
+        public Entrada()
+        {
+            Proyecciones = new List<Proyeccion>();
+        }
 
         public Entrada(int numeroEntrada, string funcion, int valor)
         {
@@ -35,5 +40,15 @@ namespace Cine
             valor = Valor;
         }
         
+        public Entrada(int valor): this ()
+        {
+            cambiarValorEntrada(valor);
+        }
+
+        public void cambiarValorEntrada(int valor)
+        {
+            Proyeccion proyeccion = new Proyeccion(this);
+            Proyecciones.Add(proyeccion);
+        }
     }
 }

@@ -29,6 +29,11 @@ namespace Cine
             FechaHora = DateTime.Now;
         }
 
+        public Proyeccion(Entrada entrada)
+        {
+            Entrada = entrada;
+        }
+
         public bool HoraFuncion(DateTime inicio, DateTime fin)
         {
             return inicio <= FechaHora && FechaHora <= fin;
