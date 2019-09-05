@@ -9,7 +9,7 @@ namespace Cine
     [Table("Sala")]
     public class Sala
     {
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("idSala")]
         public byte IdSala { get; set; }
         [Column("piso")]

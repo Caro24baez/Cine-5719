@@ -9,6 +9,7 @@ namespace Cine
     [Table ("PeliculaGenero")]
     public class PeliculaGenero
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [ForeignKey("idPelicula"), Required]
         public short Pelicula { get; set; }
 

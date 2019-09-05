@@ -9,7 +9,7 @@ namespace Cine
     [Table("Proyeccion")]
     public class Proyeccion
     {
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("idProyeccion")]
         public short IdProyeccion { get; set; }
         [ForeignKey("idPelicula"), Required]

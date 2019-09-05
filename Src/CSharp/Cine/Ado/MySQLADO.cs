@@ -9,11 +9,11 @@ namespace Cine.Ado
     public class MySQLADo :DbContext, IADO
     {
         public DbSet<Entrada> Entradas { get; set; }
-        public DbSet<Genero> Genero { get; set; }
-        public DbSet<Pelicula> Pelicula { get; set; }
-        public DbSet<PeliculaGenero> PeliculaGenero { get; set; }
-        public DbSet<Proyeccion> Proyeccion { get; set; }
-        public DbSet<Sala> Sala { get; set; }
+        public DbSet<Genero> Generos { get; set; }
+        public DbSet<Pelicula> Peliculas { get; set; }
+        public DbSet<PeliculaGenero> PeliculaGeneros { get; set; }
+        public DbSet<Proyeccion> Proyecciones { get; set; }
+        public DbSet<Sala> Salas { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -23,18 +23,18 @@ namespace Cine.Ado
 
         public virtual void agregarPelicula(Pelicula pelicula)
         {
-            Pelicula.Add(pelicula);
+            Peliculas.Add(pelicula);
             SaveChanges();
         }
 
         public void agregarEntrada(Entrada entrada)
         {
-            Entrada.Add(entrada);
+            Entradas.Add(entrada);
             SaveChanges();
         }
         public void agregarGenero(Genero genero)
         {
-            Genero.Add(genero);
+            Generos.Add(genero);
             SaveChanges();
         }
 
@@ -47,19 +47,19 @@ namespace Cine.Ado
 
         public void agregarProyeccion(Proyeccion proyeccion)
         {
-            Proyeccion.Add(proyeccion);
+            Proyecciones.Add(proyeccion);
             SaveChanges();
         }
 
         public void agregarSala(Sala sala)
         {
-            Sala.Add(sala);
+            Salas.Add(sala);
             SaveChanges();
         }
 
         
 
-        public List<Proyeccion> obtenerProyecciones() => Proyeccion.ToList();
+        public List<Proyeccion> obtenerProyecciones() => Proyecciones.ToList();
 
         public List<Entrada> obtenerEntradas() => Entradas.ToList();
         public List<Entrada> proyeccionDe(Proyeccion proyeccion)
@@ -70,7 +70,8 @@ namespace Cine.Ado
                 .ToList();
         }
 
-        public List<Pelicula> obtenerPeliculas() => Pelicula.ToList();
+        public List<Pelicula> obtenerPeliculas() => Peliculas.ToList();
 
+        
     }
 }

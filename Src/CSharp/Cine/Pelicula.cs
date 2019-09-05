@@ -9,6 +9,7 @@ namespace Cine
     [Table ("Pelicula")]
     public class Pelicula
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("idPelicula"), Required]
         public short pelicula { get; set; }
         [Column("nombre"), StringLength(45), Required]
@@ -24,7 +25,6 @@ namespace Cine
         {
             Nombre = nombre;
         }
-
-
+        
     }
 }
