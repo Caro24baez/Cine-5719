@@ -14,9 +14,9 @@ namespace Cine
         public short IdProyeccion { get; set; }
         [ForeignKey("idPelicula"), Required]
         public Pelicula Pelicula { get; set; }
-        [Column("fechaHora")]
+        [Column("fechaHora"), Required]
         public DateTime FechaHora { get; set; }
-        [Column("idSala")]
+        [Column("idSala"), Required]
         public byte Sala { get; set; }
         [ForeignKey("idEntrada"), Required]
         public Entrada Entrada { get; set; }
@@ -34,7 +34,7 @@ namespace Cine
             Entrada = entrada;
         }
 
-        public bool HoraFuncion(DateTime inicio, DateTime fin)
+        public bool horaFuncion(DateTime inicio, DateTime fin)
         {
             return inicio <= FechaHora && FechaHora <= fin;
         }
