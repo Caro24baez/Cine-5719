@@ -25,6 +25,9 @@ namespace Cine
         {
             Nombre = nombre;
         }
-        
+        public  AgregarProyeccion()
+        {
+
+        }
     }
 }
