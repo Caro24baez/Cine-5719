@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine
 {
     [Table("Entrada")]
-    public class Entrada : Pelicula
+    public class Entrada 
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("idEntrada")]
@@ -25,8 +25,7 @@ namespace Cine
         [Column("valor"), Required]
         public int Valor { get; set; }
         
-        //public List<Proyeccion> Proyecciones { get; set; }
-        //public Entrada() { }
+        public List<Proyeccion> Proyecciones { get; set; }
 
         public Entrada()
         {
@@ -40,7 +39,7 @@ namespace Cine
             this.Valor = valor;
         }
         
-        public Entrada(int valor) : this ()
+        public Entrada(int valor)
         {
             cambiarValorEntrada(valor);
         }

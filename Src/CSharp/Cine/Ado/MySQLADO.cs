@@ -73,8 +73,20 @@ namespace Cine.Ado
         public List<Pelicula> obtenerPeliculas() => Peliculas.ToList();
 
         public List<Genero> obtenerGenero() => Generos.ToList();
-        {
 
+        public List<Genero> obtenerGeneros()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Proyeccion> proyeccionDe(Entrada entrada)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Sala> obtenerSalas()
+        {
+            throw new NotImplementedException();
         }
     }
 }
