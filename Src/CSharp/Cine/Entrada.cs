@@ -39,15 +39,12 @@ namespace Cine
             this.Valor = valor;
         }
         
-        public Entrada(int valor)
+        public Entrada()
         {
-            cambiarValorEntrada(valor);
+         
         }
 
-        public void cambiarValorEntrada(int valor)
-        {
-            Proyeccion proyeccion = new Proyeccion(this);
-            Proyecciones.Add(proyeccion);
-        }
+        
+      
     }
 }

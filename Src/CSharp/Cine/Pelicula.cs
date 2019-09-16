@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Cine
 {
-    [Table ("Pelicula")]
+    [Table("Pelicula")]
     public class Pelicula
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -14,7 +14,7 @@ namespace Cine
         public short pelicula { get; set; }
         [Column("nombre"), StringLength(45), Required]
         public string Nombre { get; set; }
-        [Column("fechaLanzamiento"), Required]
+        [Column("fechaLanzamiento", TypeName = "Date" ), Required]
         public DateTime FechaLanzamiento { get; set; }
         public List<Proyeccion> Proyecciones { get; set; }
         public Pelicula()
@@ -25,9 +25,10 @@ namespace Cine
         {
             Nombre = nombre;
         }
-        public AgregarProyeccion()
+        public int AgregarProyeccion()
         {
-
+            return 0;
         }
+        
     }
 }

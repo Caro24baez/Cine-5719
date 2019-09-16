@@ -38,5 +38,13 @@ namespace Cine
         {
             return inicio <= FechaHora && FechaHora <= fin;
         }
+        public int EntradasVendidasEntre(DateTime inicio, DateTime fin)
+        {
+            return 0;
+        }
+        public int AgregarProyeccion()
+        {
+            return 0;
+        }
     }
 }
