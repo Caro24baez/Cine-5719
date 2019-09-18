@@ -32,10 +32,11 @@ namespace TestAdoMySQLCore
 
         }
 
-        [TestInitialize]
-        public void instanciarADO()
+        [TestMethod]
+        public void cambiarValorEntrada()
         {
-            Ado = new MySQLADo();
+          
+
         }
     }
 }

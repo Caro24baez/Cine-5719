@@ -13,7 +13,7 @@ namespace Cine
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("idGenero")]
-        public int Id { get; set; }
+        public byte Id { get; set; }
 
         [Column("genero"),StringLength(45), Required]
         public string genero { get; set; }

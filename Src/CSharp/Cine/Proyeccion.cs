@@ -18,20 +18,18 @@ namespace Cine
         public DateTime FechaHora { get; set; }
         [Column("idSala"), Required]
         public byte Sala { get; set; }
-        [ForeignKey("idEntrada"), Required]
-        public Entrada Entrada { get; set; }
-
+        public List<Entrada> Entradas { get; set; }
         public Proyeccion() { }
         public Proyeccion(Pelicula pelicula, Entrada entrada)
         {
             Pelicula = pelicula;
-            Entrada = entrada;
+            Entradas = entrada;
             FechaHora = DateTime.Now;
         }
 
         public Proyeccion(Entrada entrada)
         {
-            Entrada = entrada;
+            Entradas = entrada;
         }
 
         public bool horaFuncion(DateTime inicio, DateTime fin)
