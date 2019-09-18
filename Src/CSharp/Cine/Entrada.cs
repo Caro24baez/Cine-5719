@@ -16,12 +16,6 @@ namespace Cine
         [ForeignKey("idProyeccion"), Required]
         public Proyeccion Proyeccion { get; set; }
 
-        [Column("numeroEntrada"), Required]
-        public int NumeroEntrada { get; set; }
-
-        [Column("funcion"), StringLength(45), Required]
-        public string Funcion { get; set; }
-
         [Column("valor"), Required]
         public int Valor { get; set; }
         
@@ -32,10 +26,8 @@ namespace Cine
             Proyecciones = new List<Proyeccion>();
         }
 
-        public Entrada(int numeroEntrada, string funcion, int valor)
+        public Entrada(int valor)
         {
-            this.NumeroEntrada = numeroEntrada;
-            this.Funcion = funcion;
             this.Valor = valor;
         }
         

@@ -31,5 +31,11 @@ namespace TestAdoMySQLCore
         {
 
         }
+
+        [TestInitialize]
+        public void instanciarADO()
+        {
+            Ado = new MySQLADo();
+        }
     }
 }
