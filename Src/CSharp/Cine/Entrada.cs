@@ -10,17 +10,25 @@ namespace Cine
     public class Entrada 
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Key, Column("idEntrada"), Required]
+        [Key, Column("idEntrada")]
         public int Id { get; set; }
 
         [ForeignKey("idProyeccion"), Required]
         public Proyeccion Proyeccion { get; set; }
         [Column("valor"), Required]
         public int Valor { get; set; }
-
+        [Column("fechaHora"), Required]
+        public DateTime FechaHora { get; set; }
         public Entrada()
         {
-           
+
+        }
+            
+        public Entrada(int valor, Proyeccion proyeccion)
+        {
+            Proyeccion = proyeccion;
+            this.Valor = valor;
+            this.FechaHora = DateTime.Now;
         }
 
        
