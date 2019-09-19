@@ -28,7 +28,7 @@ namespace Cine
             FechaHora = DateTime.Now;
         }
 
-        public bool horaFuncion(DateTime inicio, DateTime fin)
+        public bool horaFuncion(DateTime inicio, DateTime fin) 
         {
             return inicio <= FechaHora && FechaHora <= fin;
         }
@@ -42,6 +42,11 @@ namespace Cine
         public int AgregarProyeccion()
         {
             return 0;
+        }
+
+        public int EntradasDisponible()
+        {
+            return Entradas.Count - Sala.Capacidad;
         }
     }
 }

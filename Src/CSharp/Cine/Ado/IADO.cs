@@ -15,19 +15,19 @@ namespace Cine.Ado
 
         #region Genero
         void agregarGenero(Genero genero);
-        List<Genero> obtenerGeneros();
+        //List<Genero> obtenerGeneros();
         #endregion
 
         #region Entrada
         void agregarEntrada(Entrada entrada);
         void actualizarEntrada(Entrada entrada);
         List<Entrada> obtenerEntradas();
-        List<Proyeccion> proyeccionDe(Entrada entrada);
+        //List<Proyeccion> proyeccionDe(Entrada entrada);
         #endregion
 
         #region Sala
         void agregarSala(Sala sala);
-        List<Sala> obtenerSalas();
+        //List<Sala> obtenerSalas();
         #endregion
 
         #region Proyeccion
