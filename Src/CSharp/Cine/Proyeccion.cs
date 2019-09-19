@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 
 namespace Cine
 {
@@ -12,32 +11,34 @@ namespace Cine
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("idProyeccion")]
-        public short Id { get; set; }
+        public short IdProyeccion { get; set; }
         [ForeignKey("idPelicula"), Required]
         public Pelicula Pelicula { get; set; }
         [Column("fechaHora"), Required]
         public DateTime FechaHora { get; set; }
-        [ForeignKey("idSala"), Required]
-        public Sala Sala { get; set; }
+        [Column("idSala"), Required]
+        public byte Sala { get; set; }
         public List<Entrada> Entradas { get; set; }
-        public Proyeccion() { } 
-        public Proyeccion(Pelicula pelicula, Sala sala)
+        public Proyeccion() { }
+        public Proyeccion(Pelicula pelicula, Entrada entrada)
         {
-            Sala = sala;
             Pelicula = pelicula;
+            Entradas = entrada;
             FechaHora = DateTime.Now;
+        }
+
+        public Proyeccion(Entrada entrada)
+        {
+            Entradas = entrada;
         }
 
         public bool horaFuncion(DateTime inicio, DateTime fin)
         {
             return inicio <= FechaHora && FechaHora <= fin;
         }
-        public List<Entrada> EntradasVendidasEntre(DateTime inicio, DateTime fin)
+        public int EntradasVendidasEntre(DateTime inicio, DateTime fin)
         {
-            List<Entrada> entradasTotales = Entradas.Where(a => a.FechaHora > inicio && a.FechaHora < fin).ToList();
-                                  
-            return entradasTotales;
-            
+            return 0;
         }
         public int AgregarProyeccion()
         {

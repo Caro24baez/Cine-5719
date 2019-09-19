@@ -11,7 +11,7 @@ namespace Cine
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("idSala")]
-        public byte Id { get; set; }
+        public byte IdSala { get; set; }
         [Column("piso")]
         public byte Piso { get; set; }
 

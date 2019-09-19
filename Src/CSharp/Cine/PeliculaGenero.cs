@@ -10,14 +10,11 @@ namespace Cine
     public class PeliculaGenero
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [ Key, Column ("idPeliculaGenero")]
-        public byte Id { get; set; }
         [ForeignKey("idPelicula"), Required]
         public short Pelicula { get; set; }
 
         [ForeignKey("idGenero"), Required]
         public byte Genero { get; set; }
-        
         public PeliculaGenero() { }
     }
 }

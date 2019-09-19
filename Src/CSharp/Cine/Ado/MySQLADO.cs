@@ -18,7 +18,7 @@ namespace Cine.Ado
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=cine;user=root;password=root");
+            optionsBuilder.UseMySQL("server=localhost;database=cine;user=Cine;password=cine");
         }
 
         public virtual void agregarPelicula(Pelicula pelicula)
