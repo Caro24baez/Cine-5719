@@ -10,8 +10,8 @@ namespace Cine
     public class Pelicula
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Key, Column("idPelicula"), Required]
-        public short pelicula { get; set; }
+        [Key, Column("idPelicula")]
+        public short id { get; set; }
         [Column("nombre"), StringLength(45), Required]
         public string Nombre { get; set; }
         [Column("fechaLanzamiento", TypeName = "Date" ), Required]
@@ -24,10 +24,11 @@ namespace Cine
         public Pelicula(string nombre)
         {
             Nombre = nombre;
+            FechaLanzamiento = DateTime.Now;
         }
-        public int AgregarProyeccion()
+        public void AgregarProyeccion(Proyeccion proyeccion)
         {
-            return 0;
+            Proyecciones.Add(proyeccion);
         }
         
     }
