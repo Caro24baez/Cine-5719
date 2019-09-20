@@ -18,7 +18,7 @@ namespace Cine.Ado
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=cine;user=root;password=root");
+            optionsBuilder.UseMySQL("server=localhost;database=cine;user=root;password=admin");
         }
 
         public virtual void agregarPelicula(Pelicula pelicula)
@@ -73,6 +73,12 @@ namespace Cine.Ado
         public List<Pelicula> obtenerPeliculas() => Peliculas.ToList();
 
         public List<Genero> obtenerGenero() => Generos.ToList();
+
+        public void actualizar(Proyeccion proyeccion)
+        {
+            Proyecciones.Update(proyeccion);
+            SaveChanges();
+        }
 
         //public List<Genero> obtenerGeneros()
         //{

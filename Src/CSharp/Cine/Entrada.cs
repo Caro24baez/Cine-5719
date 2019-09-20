@@ -16,7 +16,7 @@ namespace Cine
         [ForeignKey("idProyeccion"), Required]
         public Proyeccion Proyeccion { get; set; }
         [Column("valor"), Required]
-        public int Valor { get; set; }
+        public double Valor { get; set; }
         [Column("fechaHora"), Required]
         public DateTime FechaHora { get; set; }
         public Entrada()
@@ -24,14 +24,16 @@ namespace Cine
 
         }
             
-        public Entrada(int valor, Proyeccion proyeccion)
+        public Entrada(Proyeccion proyeccion)
         {
             Proyeccion = proyeccion;
-            this.Valor = valor;
+            this.Valor = proyeccion.Valor;
             this.FechaHora = DateTime.Now;
         }
 
-       
-      
+        public static implicit operator List<object>(Entrada v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

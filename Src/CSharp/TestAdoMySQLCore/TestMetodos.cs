@@ -1,35 +1,34 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Cine;
+﻿using Cine;
 using Cine.Ado;
-using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace TestAdoMySQLCore
 {
     [TestClass]
     public class TestMetodos
     {
-        [TestMethod]
-        public void entradasVendidasEntre()
+        [ClassInitialize]
+        public static void iniciarClase(TestContext testContext)
         {
             var ado = new MySQLADo();
             ado.Database.EnsureDeleted();
             ado.Database.EnsureCreated();
+        }
+        [TestMethod]
+        public void entradasVendidasEntre()
+        {
+            
+            var ado = new MySQLADo();
             Sala sala = new Sala(2, 100);
             Pelicula pelicula = new Pelicula("IT 2");
-            Proyeccion proyeccion = new Proyeccion(pelicula, sala);
+            Proyeccion proyeccion = new Proyeccion(pelicula, sala, 90);
             ado.agregarPelicula(pelicula);
-            Entrada entrada1 = new Entrada(350, proyeccion);
-            ado.agregarEntrada(entrada1);
-            Entrada entrada2 = new Entrada(150, proyeccion);
-            ado.agregarEntrada(entrada2);
-            Entrada entrada3 = new Entrada(350, proyeccion);
-            ado.agregarEntrada(entrada3);
-            Entrada entrada4 = new Entrada(150, proyeccion);
-            ado.agregarEntrada(entrada4);
-
+            proyeccion.venderEntrada();
+            proyeccion.venderEntrada();
+            proyeccion.venderEntrada();
+            proyeccion.venderEntrada();
+            ado.actualizar(proyeccion);
             var inicio = new DateTime(2009, 08, 02);
             var fin = new DateTime(2009, 08, 03);
             var resultado = proyeccion.EntradasVendidasEntre(inicio, fin);
@@ -37,7 +36,22 @@ namespace TestAdoMySQLCore
             Assert.AreEqual(resultado.Count, 0);
 
         }
-        
-        
+        [TestMethod]
+        public void entradasDisponibles()
+        {
+            var ado = new MySQLADo();
+            Sala sala = new Sala(3, 500);
+            Pelicula pelicula = new Pelicula("Odisea de los Giles");
+            Proyeccion proyeccion = new Proyeccion(pelicula, sala, 80);
+            ado.agregarPelicula(pelicula);
+
+            
+            int resulta2 = proyeccion.EntradasDisponibles();
+
+            Assert.AreEqual(resulta2, -500);
+
+
+        }
+
     }
 }

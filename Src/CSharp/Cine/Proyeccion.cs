@@ -19,12 +19,19 @@ namespace Cine
         public DateTime FechaHora { get; set; }
         [ForeignKey("idSala"), Required]
         public Sala Sala { get; set; }
+        [Column("valor"), Required]
+        public double Valor { get; set; }
+        
         public List<Entrada> Entradas { get; set; }
-        public Proyeccion() { } 
-        public Proyeccion(Pelicula pelicula, Sala sala)
+        public Proyeccion() {
+
+            Entradas = new List<Entrada>();
+        } 
+        public Proyeccion(Pelicula pelicula, Sala sala, double valor) : this ()
         {
             Sala = sala;
             Pelicula = pelicula;
+            Valor = valor;
             FechaHora = DateTime.Now;
         }
 
@@ -39,14 +46,15 @@ namespace Cine
             return entradasTotales;
             
         }
-        public int AgregarProyeccion()
-        {
-            return 0;
-        }
-
-        public int EntradasDisponible()
+        public int EntradasDisponibles()
         {
             return Entradas.Count - Sala.Capacidad;
+        }
+        public void venderEntrada()
+        {
+            Entrada entrada = new Entrada(this);
+            Entradas.Add(entrada);
+        
         }
     }
 }
