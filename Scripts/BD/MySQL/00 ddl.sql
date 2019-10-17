@@ -66,7 +66,16 @@ CREATE TABLE Pelicula
 ) 
 ;
 
-
+CREATE TABLE  Cajero
+(
+	idCajero SMALLINT NOT NULL,
+    nombre VARCHAR(45) NOT NULL,
+    apellido VARCHAR(45) NOT NULL,
+    email VARCHAR(45) NOT NULL,
+    contraseña VARCHAR(45) NOT NULL,
+    PRIMARY KEY (idCajero),
+    KEY (idEntrada)
+);
 
 ALTER TABLE PeliculaGenero ADD CONSTRAINT FK_PeliculaGenero_Genero 
 	FOREIGN KEY (idGenero) REFERENCES Genero (idGenero)
