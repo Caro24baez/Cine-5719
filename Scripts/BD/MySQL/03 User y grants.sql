@@ -1,9 +1,14 @@
-CREATE USER 'operador'@'10.120.0.%'
-IDENTIFIED BY '0123456789';
+Create USER 'Administrador'@'%'IDENTIFIED BY 'passadmin';
+Create USER 'Usuario'@'%' IDENTIFIED BY 'passusuario';
 
-GRANT SELECT ON Proyeccion TO 'operador'@'10.120.0.%';
-GRANT SELECT ON Sala TO 'operador'@'10.120.0.%';
-GRANT SELECT ON Pelicula TO 'operador'@'10.120.0.%';
-GRANT SELECT ON PeliculaGenero TO 'operador'@'10.120.0.%';
-GRANT SELECT ON Genero TO 'operador'@'10.120.0.%';
-GRANT SELECT, INSERT ON Entrada TO 'operador'@'10.120.0.%';
+Grant Select,Insert ON Pelicula TO 'Administrador'@'%';
+Grant Select,Insert ON Genero TO 'Administrador'@'%';
+Grant Select,Insert ON PeliculaGenero TO 'Administrador'@'%';
+Grant Select,Insert ON Proyeccion TO 'Administrador'@'%';
+Grant Select,Insert ON Sala TO 'Administrador'@'%';
+
+Grant Select,Insert On Pelicula TO 'Usuario'@'%';
+Grant Select,Insert ON Pelicula TO 'Usuario'@'%';
+Grant Select,Insert ON Genero TO 'Usuario'@'%';
+Grant Select,Insert ON Proyeccion TO 'Usuario'@'%';
+Grant Select,Insert ON Sala TO 'Usuario'@'%';
