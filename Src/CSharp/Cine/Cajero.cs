@@ -25,7 +25,7 @@ namespace Cine
         public string apellido { get; set; }
 
         [Column("contraseña"), StringLength(45), Required]
-        public string contraseña { get; set; }
+        public string contrasenia { get; set; }
 
         [Column("email"), StringLength(45), Required]
         public string email { get; set; }
