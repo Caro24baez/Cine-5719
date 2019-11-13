@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsolaOperador.Operador
 {
-    class AltaOperadorEntrada
+    public class AltaOperadorEntrada
     {
     }
 }

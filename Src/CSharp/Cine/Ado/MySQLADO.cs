@@ -21,6 +21,8 @@ namespace Cine.Ado
             optionsBuilder.UseMySQL("server=localhost;database=cine;user=root;password=admin");
         }
 
+        internal MySQLADo(DbContextOptions dbo) : base(dbo) { }
+
         public virtual void agregarPelicula(Pelicula pelicula)
         {
             Peliculas.Add(pelicula);
