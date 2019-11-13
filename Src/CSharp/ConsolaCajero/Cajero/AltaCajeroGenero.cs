@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using static System.ReadLine;
 
-namespace ConsolaAdministrador.Administrador
+namespace ConsolaCajero.Cajero
 {
-    public class AltaAdministrador : 
+    public class AltaGenero
     {
-
+     
     }
 }
