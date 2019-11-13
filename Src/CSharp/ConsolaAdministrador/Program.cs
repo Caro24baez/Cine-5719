@@ -6,7 +6,7 @@ namespace ConsolaAdministrador
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           
         }
     }
 }

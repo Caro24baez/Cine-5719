@@ -14,8 +14,7 @@ namespace TestAdoMySQLCore
         [ClassInitialize]
         public static void fixture(TestContext context)
         {
-           
-           
+                     
         }
     }
 }
