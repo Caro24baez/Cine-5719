@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace ConsolaAdministrador
+namespace ConsolaOperador
 {
-   public class Program
+    class Program
     {
         static void Main(string[] args)
         {
-           
+            Console.WriteLine("Hello World!");
         }
     }
 }
