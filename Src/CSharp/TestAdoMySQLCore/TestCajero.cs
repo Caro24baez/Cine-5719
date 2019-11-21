@@ -14,7 +14,10 @@ namespace TestAdoMySQLCore
         [ClassInitialize]
         public static void fixture(TestContext context)
         {
-                     
+            var ado = new MySQLADo();
+            ado.Database.EnsureDeleted();
+            ado.Database.EnsureCreated();
         }
+
     }
 }
