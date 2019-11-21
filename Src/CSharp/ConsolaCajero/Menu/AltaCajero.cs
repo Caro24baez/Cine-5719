@@ -1,5 +1,6 @@
 ﻿using MenuesConsola;
 using System.Collections.Generic;
+using NETCore.Encrypt;
 using System.Text;
 using System;
 using Cine;

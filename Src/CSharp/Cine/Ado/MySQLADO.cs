@@ -79,21 +79,17 @@ namespace Cine.Ado
             SaveChanges();
         }
 
-        public List<Cajero> obtenerCajeros() => Cajeros.ToList();
-
-        public Cajero cajerPorDniPass(int dni, string passcajero)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Cajero> ObtenerCajeros()
-        {
-            throw new NotImplementedException();
-        }
+        public List<Cajero> ObtenerCajeros() => Cajeros.ToList();
+        
         public void altaCajero(Cajero cajero)
         {
             Cajeros.Add(cajero);
             SaveChanges();
         }
+
+        public Cajero cajeroPorIdPass(short id, string passcajero) =>
+        Cajeros.FirstOrDefault(c => c.Id == id && c.Contrasenia == passcajero);
+
+
     }
 }
