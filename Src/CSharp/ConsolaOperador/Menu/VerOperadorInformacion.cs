@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsolaOperador.Operador
+namespace ConsolaOperador.Menu
 {
     public class VerOperadorInformacion
     {
