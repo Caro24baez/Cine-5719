@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System;
+using Cine;
 using static System.ReadLine;
+
 namespace ConsolaCajero.Cajero
 {
     public class AltaCajero : MenuComponente
@@ -11,7 +13,6 @@ namespace ConsolaCajero.Cajero
         public override void mostrar()
         {
             base.mostrar();
-
             var dni = Convert.ToInt32("Ingrese DNI");
             var nombre = ("Ingrese nombre cajero");
             var apellido = ("Ingrese apellido");
@@ -26,10 +27,9 @@ namespace ConsolaCajero.Cajero
                 Dni = dni,
                 Password = pass
             };
-
             try
             {
-                AdoGerente.ADO.altaCajero(Cajero);
+                AdoCajero.ADO.altaCajero(Cajero);
                 Console.WriteLine("Cajero dada de alta con exito");
             }
             catch (Exception e)

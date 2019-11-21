@@ -9,9 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAdoMySQLCore", "TestAdo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsolaCajero", "ConsolaCajero\ConsolaCajero.csproj", "{301E2D2C-71D5-46F1-A205-7F53675B6F2B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsolaAdministrador", "ConsolaAdministrador\ConsolaAdministrador.csproj", "{69129250-E6E8-4AFE-88F8-5E96AC4EF4FD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolaOperador", "ConsolaOperador\ConsolaOperador.csproj", "{5B6D94C9-6D26-48CA-A4AE-4DF02EE41414}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsolaOperador", "ConsolaOperador\ConsolaOperador.csproj", "{5B6D94C9-6D26-48CA-A4AE-4DF02EE41414}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +29,6 @@ Global
 		{301E2D2C-71D5-46F1-A205-7F53675B6F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{301E2D2C-71D5-46F1-A205-7F53675B6F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{301E2D2C-71D5-46F1-A205-7F53675B6F2B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69129250-E6E8-4AFE-88F8-5E96AC4EF4FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69129250-E6E8-4AFE-88F8-5E96AC4EF4FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69129250-E6E8-4AFE-88F8-5E96AC4EF4FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69129250-E6E8-4AFE-88F8-5E96AC4EF4FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5B6D94C9-6D26-48CA-A4AE-4DF02EE41414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5B6D94C9-6D26-48CA-A4AE-4DF02EE41414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B6D94C9-6D26-48CA-A4AE-4DF02EE41414}.Release|Any CPU.ActiveCfg = Release|Any CPU

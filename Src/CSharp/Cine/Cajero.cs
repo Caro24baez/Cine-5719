@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Cine
 {
     [Table ("Cajero")]
-    class Cajero
+    public class Cajero
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("idCajero")]

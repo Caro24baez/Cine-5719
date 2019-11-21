@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System;
 
-
 namespace Cine.Ado
 {
     public class MySQLADo : DbContext, IADO
@@ -14,6 +13,7 @@ namespace Cine.Ado
         public DbSet<PeliculaGenero> PeliculaGeneros { get; set; }
         public DbSet<Proyeccion> Proyecciones { get; set; }
         public DbSet<Sala> Salas { get; set; }
+        public DbSet<Cajero>Cajeros { get; set;}
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -40,7 +40,6 @@ namespace Cine.Ado
             SaveChanges();
         }
 
-
         public void actualizarEntrada(Entrada entrada)
         {
             this.Update<Entrada>(entrada);
@@ -58,8 +57,6 @@ namespace Cine.Ado
             Salas.Add(sala);
             SaveChanges();
         }
-
-
 
         public List<Proyeccion> obtenerProyecciones() => Proyecciones.ToList();
 
@@ -82,19 +79,21 @@ namespace Cine.Ado
             SaveChanges();
         }
 
-        //public List<Genero> obtenerGeneros()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public List<Cajero> obtenerCajeros() => Cajeros.ToList();
 
-        //public List<Proyeccion> proyeccionDe(Entrada entrada)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public Cajero cajerPorDniPass(int dni, string passcajero)
+        {
+            throw new NotImplementedException();
+        }
 
-        //public List<Sala> obtenerSalas()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public List<Cajero> ObtenerCajeros()
+        {
+            throw new NotImplementedException();
+        }
+        public void altaCajero(Cajero cajero)
+        {
+            Cajeros.Add(cajero);
+            SaveChanges();
+        }
     }
 }

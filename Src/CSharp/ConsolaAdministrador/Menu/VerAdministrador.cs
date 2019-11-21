@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsolaAdministrador.Administrador
 {
-    class VerAdministrador
+    public class VerAdministrador
     {
     }
 }

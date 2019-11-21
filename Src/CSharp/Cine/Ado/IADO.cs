@@ -36,5 +36,10 @@ namespace Cine.Ado
         void actualizar(Proyeccion proyeccion);
         #endregion
 
+        #region Cajero
+        void altaCajero(Cajero cajero);
+        Cajero cajerPorDniPass(int dni, string passcajero);
+        List<Cajero> ObtenerCajeros();
+        #endregion
     }
 }
