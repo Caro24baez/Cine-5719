@@ -5,7 +5,7 @@ using System;
 
 namespace Cine.Ado
 {
-    public class MySQLADo : DbContext, IADO
+    public class MySQLADO : DbContext, IADO
     {
         public DbSet<Entrada> Entradas { get; set; }
         public DbSet<Genero> Generos { get; set; }
@@ -15,13 +15,14 @@ namespace Cine.Ado
         public DbSet<Sala> Salas { get; set; }
         public DbSet<Cajero>Cajeros { get; set;}
 
+        public MySQLADO() : base() { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=cine;user=root;password=admin");
+            optionsBuilder.UseMySQL("server=localhost;database=cine;user=root;password=root");
         }
 
-        internal MySQLADo(DbContextOptions dbo) : base(dbo) { }
+        internal MySQLADO(DbContextOptions dbo) : base(dbo) { }
 
         public virtual void agregarPelicula(Pelicula pelicula)
         {
@@ -90,6 +91,9 @@ namespace Cine.Ado
         public Cajero cajeroPorDni(int dni, string passCajero) =>
         Cajeros.FirstOrDefault(c => c.Dni == dni && c.Contrasenia == passCajero);
 
-       
+        public List<Cajero> obtenerCajeros()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

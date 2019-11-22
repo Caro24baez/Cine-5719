@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Cine;
 
 namespace ConsolaAdministrador.Menu
 {
-    public class MenuUsuarioAdministrador
+    public class MenuListaGeneros
     {
-        public AdoAdministrador administrador { get; set; }
+
     }
 }

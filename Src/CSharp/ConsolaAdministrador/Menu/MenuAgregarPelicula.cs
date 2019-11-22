@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Cine;
 
 namespace ConsolaAdministrador.Menu
 {
-    class AdoAdministrador
+    public class MenuAgregarPelicula
     {
+
     }
 }

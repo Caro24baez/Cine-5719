@@ -7,12 +7,12 @@ namespace TestAdoMySQLCore
     [TestClass]
     public class TestsCreacionBD
     {
-        public static MySQLADo AdoMySQL { get; set; }
+        public static MySQLADO AdoMySQL { get; set; }
 
         [ClassInitialize]
         public static void SetUpClase(TestContext context)
         {
-            AdoMySQL = new MySQLADo();
+            AdoMySQL = new MySQLADO();
             AdoMySQL.Database.EnsureDeleted();
         }
 

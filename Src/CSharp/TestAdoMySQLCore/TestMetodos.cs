@@ -11,7 +11,7 @@ namespace TestAdoMySQLCore
         [ClassInitialize]
         public static void iniciarClase(TestContext testContext)
         {
-            var ado = new MySQLADo();
+            var ado = new MySQLADO();
             ado.Database.EnsureDeleted();
             ado.Database.EnsureCreated();
         }
@@ -19,7 +19,7 @@ namespace TestAdoMySQLCore
         public void entradasVendidasEntre()
         {
             
-            var ado = new MySQLADo();
+            var ado = new MySQLADO();
             Sala sala = new Sala(2, 100);
             Pelicula pelicula = new Pelicula("IT 2");
             Proyeccion proyeccion = new Proyeccion(pelicula, sala, 90);
@@ -39,7 +39,7 @@ namespace TestAdoMySQLCore
         [TestMethod]
         public void entradasDisponibles()
         {
-            var ado = new MySQLADo();
+            var ado = new MySQLADO();
             Sala sala = new Sala(3, 500);
             Pelicula pelicula = new Pelicula("Odisea de los Giles");
             Proyeccion proyeccion = new Proyeccion(pelicula, sala, 80);

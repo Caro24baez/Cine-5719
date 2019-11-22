@@ -5,13 +5,13 @@ namespace Cine.Ado
 {
     public class FactoryAdoMySQL
     {
-        public static MySQLADo GetAdo(string cadena)
+        public static MySQLADO GetAdo(string cadena)
         {
             var dbContextOptions = new DbContextOptionsBuilder();
             dbContextOptions.UseMySQL(cadena);
-            return new MySQLADo(dbContextOptions.Options);
+            return new MySQLADO(dbContextOptions.Options);
         }
-        public static MySQLADo GetAdoDesdeJson(string archivo, string atributoJson)
+        public static MySQLADO GetAdoDesdeJson(string archivo, string atributoJson)
         {
             IConfiguration config = new ConfigurationBuilder()
                 .AddJsonFile(archivo, optional: true, reloadOnChange: true)
