@@ -9,4 +9,14 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cine\Cine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BiblioMenu">
+      <HintPath>..\lib\BiblioMenu.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
