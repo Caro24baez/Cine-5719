@@ -21,7 +21,6 @@ namespace Cine
         public DateTime FechaHora { get; set; }
         public Entrada()
         {
-
         }
             
         public Entrada(Proyeccion proyeccion)
