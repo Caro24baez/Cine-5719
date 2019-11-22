@@ -61,7 +61,7 @@ namespace Cine.Ado
 
         public List<Proyeccion> obtenerProyecciones() => Proyecciones.ToList();
 
-        public List<Entrada> obtenerEntradas() => Entradas.ToList();
+        public List<Entrada> obtenerEntradasParaCajero() => Entradas.ToList();
         public List<Entrada> proyeccionDe(Proyeccion proyeccion)
         {
             return Entradas
@@ -88,12 +88,17 @@ namespace Cine.Ado
             SaveChanges();
         }
 
-        public Cajero cajeroPorDni(int dni, string passCajero) =>
-        Cajeros.FirstOrDefault(c => c.Dni == dni && c.Contrasenia == passCajero);
-
         public List<Cajero> obtenerCajeros()
         {
             throw new NotImplementedException();
         }
+
+        public List<Entrada> obtenerEntradasParaCajero(Cajero cajero)
+        {
+            return Entradas.Where(x => x.cajero.Dni == cajero.Dni).Include(p => p.Proyeccion).ToList();
+        }
+
+        public Cajero cajeroPorMailyPass(string mail, string pass) =>
+        Cajeros.FirstOrDefault(c => c.Email == mail && c.Contrasenia == pass);
     }
 }

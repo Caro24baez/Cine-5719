@@ -3,11 +3,11 @@ using MenuesConsola;
 using NETCore.Encrypt;
 using Cine;
 using static System.ReadLine;
-using ConsolaCajero;
+using ConsolaCajero.Menu;
 
-namespace consolaCajero
+namespace consolaCajero.Menu
 {
-    public class Login : MenuComponente
+    public class Login : MenuCompuesto
     {
         public Cajero Cajero { get; set; }
         public MenuCompuesto PrincipalUsuario { get; set; }
@@ -17,16 +17,15 @@ namespace consolaCajero
         {
             base.mostrar();
 
-            var dni = Convert.ToInt32(prompt("Ingrese dni"));
+            var mail = prompt("Ingrese mail: ");
             var pass = ReadPassword("Ingrese contraseña: ");
             pass = EncryptProvider.Sha256(pass);
-
+            Cajero = ConsolaCajero.AdoCajero.ADO.cajeroPorMailyPass(mail, pass);
             try
             {
-                Cajero = AdoCajero.ADO.cajeroPorDni(dni, pass);
                 if (Cajero is null)
                 {
-                    Console.WriteLine("DNI o contraseña incorrecta");
+                    Console.WriteLine("Email es incorrecta");
                     Console.ReadKey();
                 }
                 else
@@ -44,13 +43,15 @@ namespace consolaCajero
 
         public void instanciarMenuesPara(Cajero cajero)
         {
-            
-            var menuListaCajeros = new MenuListaCajeros() { Nombre = "Listado Cajeros" };
-            var menuAltaCajero = new MenuAltaCajero() { Nombre = "Alta Cajero" };
+            var menuListaProyeccion = new MenuListaProyeccion();
             var menuAltaEntrada = new MenuAltaEntrada() { Nombre = "Alta Entrada" };
+            menuAltaEntrada.
+
+            var menuListaEntradas = new MenuListaEntradas() { Nombre = "Lista Entradas" , cajero = cajero};
 
             PrincipalUsuario = new MenuCompuesto() { Nombre = "Login" };
-            PrincipalUsuario.agregarMenu(MenuAltaCajero);
+            PrincipalUsuario.agregarMenu(menuAltaEntrada);
+            PrincipalUsuario.agregarMenu(menuListaEntradas);
 
         }
     }

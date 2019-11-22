@@ -14,8 +14,8 @@ namespace TestAdoMySQLCore
         {
             AdoMySQL = new MySQLADO();
             AdoMySQL.Database.EnsureDeleted();
-        }
 
+        }
         [TestMethod]
         public void SeCreaBD()
         {

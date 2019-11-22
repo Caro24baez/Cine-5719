@@ -12,9 +12,10 @@ namespace Cine
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("idEntrada")]
         public int Id { get; set; }
-
         [ForeignKey("idProyeccion"), Required]
         public Proyeccion Proyeccion { get; set; }
+        [ForeignKey("idCajero"), Required]
+        public Cajero cajero { get; set; }
         [Column("valor"), Required]
         public double Valor { get; set; }
         [Column("fechaHora"), Required]

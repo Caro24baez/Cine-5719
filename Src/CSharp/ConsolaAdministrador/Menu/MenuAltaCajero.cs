@@ -3,12 +3,11 @@ using NETCore.Encrypt;
 using Cine;
 using MenuesConsola;
 using static System.ReadLine;
-using ConsolaA;
+using ConsolaCajero;
 
 namespace consolaCajero
 {
     public class MenuAltaCajero : MenuComponente
-
     {
        public Cajero Cajero { get; set; }
         public override void mostrar()
@@ -44,5 +43,5 @@ namespace consolaCajero
         }
 
     }
-    }
+    
 }

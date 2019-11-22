@@ -21,7 +21,7 @@ namespace Cine.Ado
         #region Entrada
         void agregarEntrada(Entrada entrada);
         void actualizarEntrada(Entrada entrada);
-        List<Entrada> obtenerEntradas();
+        List<Entrada> obtenerEntradasParaCajero(Cajero cajero);
         //List<Proyeccion> proyeccionDe(Entrada entrada);
         #endregion
 
@@ -38,7 +38,7 @@ namespace Cine.Ado
 
         #region Cajero
         void altaCajero(Cajero cajero);
-        Cajero cajeroPorDni (int dni, string pass);
+        Cajero cajeroPorMailyPass (string mail, string pass);
         List<Cajero> obtenerCajeros();
         #endregion
     }
