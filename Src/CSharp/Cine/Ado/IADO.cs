@@ -15,7 +15,7 @@ namespace Cine.Ado
 
         #region Genero
         void agregarGenero(Genero genero);
-        //List<Genero> obtenerGeneros();
+        List<Genero> obtenerGeneros();
         #endregion
 
         #region Entrada

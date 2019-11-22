@@ -100,5 +100,10 @@ namespace Cine.Ado
 
         public Cajero cajeroPorMailyPass(string mail, string pass) =>
         Cajeros.FirstOrDefault(c => c.Email == mail && c.Contrasenia == pass);
+
+        public List<Genero> obtenerGeneros()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
