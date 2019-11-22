@@ -21,5 +21,6 @@ namespace TestAdoMySQLCore
         {
             AdoMySQL.Database.EnsureCreated();
         }
+       
     }
 }

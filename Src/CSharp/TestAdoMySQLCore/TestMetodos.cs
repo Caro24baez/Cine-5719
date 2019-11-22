@@ -52,6 +52,15 @@ namespace TestAdoMySQLCore
 
 
         }
+        [TestMethod]
+        public void RealizarVentaEntrada()
+        {
+            var ado = new MySQLADO();
+            Entrada Entradas = new Entrada();
+            Pelicula pelicula = new Pelicula("Malefica");
+            Proyeccion proyeccion = new Proyeccion();
+    
+        }
 
     }
 }
