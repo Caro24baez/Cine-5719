@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Cine;
 
-namespace consolaCajero
+namespace ConsolaCajero.Menu
 {
-    public class AltaGenero
+    class MenuListaCajeros
     {
     }
 }

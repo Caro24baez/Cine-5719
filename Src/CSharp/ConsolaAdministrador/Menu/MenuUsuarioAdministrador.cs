@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace consolaCajero
+namespace ConsolaAdministrador.Menu
 {
-    public class AltaCajeroPelicula
+    class MenuUsuarioAdministrador
     {
     }
 }

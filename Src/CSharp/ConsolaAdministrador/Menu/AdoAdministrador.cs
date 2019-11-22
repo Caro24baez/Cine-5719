@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsolaAdministrador.Administrador
+namespace ConsolaAdministrador.Menu
 {
-    public class VerAdministrador
+    class AdoAdministrador
     {
     }
 }

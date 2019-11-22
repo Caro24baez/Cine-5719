@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsolaCajero", "ConsolaCaj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsolaOperador", "ConsolaOperador\ConsolaOperador.csproj", "{5B6D94C9-6D26-48CA-A4AE-4DF02EE41414}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolaAdministrador", "ConsolaAdministrador\ConsolaAdministrador.csproj", "{BCA6DCD4-D8BD-4872-98C5-F073317A22FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5B6D94C9-6D26-48CA-A4AE-4DF02EE41414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B6D94C9-6D26-48CA-A4AE-4DF02EE41414}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B6D94C9-6D26-48CA-A4AE-4DF02EE41414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA6DCD4-D8BD-4872-98C5-F073317A22FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA6DCD4-D8BD-4872-98C5-F073317A22FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA6DCD4-D8BD-4872-98C5-F073317A22FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA6DCD4-D8BD-4872-98C5-F073317A22FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
