@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using MenuesConsola;
 using NETCore.Encrypt;
 using Cine;
 using static System.ReadLine;
+using ConsolaCajero;
 
-
-namespace ConsolaCajero.Menu
+namespace consolaCajero
 {
-    public class Login
+    public class Login : MenuComponente
     {
-        private Cajero Cajero { get; set; }
-        private MenuCompuesto PrincipalUsuario { get; set; }
+        public Cajero Cajero { get; set; }
+        public MenuComponente PrincipalUsuario { get; set; }
 
 
         public override void mostrar()
@@ -25,7 +23,7 @@ namespace ConsolaCajero.Menu
 
             try
             {
-                Cajero = AdoCajero.ADO.cajeroPorDniPass(dni, pass);
+                Cajero = AdoCajero.ADO.cajeroPorDni(dni, pass);
                 if (Cajero is null)
                 {
                     Console.WriteLine("DNI o contraseña incorrecta");
@@ -44,11 +42,8 @@ namespace ConsolaCajero.Menu
             }
         }
 
-        private void instanciarMenuesPara(Cajero cajero)
+        public void instanciarMenuesPara(Cajero cajero)
         {
-            var menuAltaTicket = new MenuAltaTicket(cajero);
-            //De haber mas menues para el cajero, se siguen instanciado aca
-
-            PrincipalUsuario = new MenuCompuesto(menuAltaTicket) { Nombre = "Menu Cajero" };
         }
+    }
 }
