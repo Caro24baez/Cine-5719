@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsolaCajero.Menu
+namespace consolaCajero
 {
     public class AltaCajeroPelicula
     {

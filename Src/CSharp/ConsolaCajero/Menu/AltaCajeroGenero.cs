@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Cine;
 
-namespace ConsolaCajero.Menu
+namespace consolaCajero
 {
     public class AltaGenero
     {
-        public Genero Genero
     }
 }
