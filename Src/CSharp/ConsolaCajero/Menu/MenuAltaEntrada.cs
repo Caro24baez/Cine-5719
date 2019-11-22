@@ -4,7 +4,8 @@ using System.Text;
 
 namespace ConsolaCajero.Menu
 {
-    class MenuAltaEntrada
+    public class MenuAltaEntrada
     {
+        public string Nombre { get; internal set; }
     }
 }

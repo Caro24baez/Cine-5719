@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MenuesConsola;
+using consolaCajero;
+using ConsolaCajero.Menu;
+using ProgramaGerente.Menu;
 
 namespace ConsolaCajero
 {
@@ -6,7 +9,12 @@ namespace ConsolaCajero
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           //var menuListaCajeros = new MenuListaCajeros() { Nombre = "Listado Cajeros" };
+           //var menuAltaCajero = new MenuAltaCajero() { Nombre = "Alta Cajero" };
+           //var menuAltaEntrada = new MenuAltaEntrada() { Nombre = "Alta Entrada" };
+
+            var login = new Login() { Nombre = "Inicio Usuario" };
+            login.mostrar();
         }
     }
 }

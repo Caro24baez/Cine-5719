@@ -23,6 +23,8 @@ namespace Cine
         [Column("contrasenia"), StringLength(45), Required]
         public string Contrasenia { get; set; }
 
+        [NotMapped]
+        public string NombreCompleto => $"{Apellido}, {Nombre}";
 
     }
 }
