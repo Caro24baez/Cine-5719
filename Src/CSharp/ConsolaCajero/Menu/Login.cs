@@ -10,7 +10,7 @@ namespace consolaCajero
     public class Login : MenuComponente
     {
         public Cajero Cajero { get; set; }
-        public MenuComponente PrincipalUsuario { get; set; }
+        public MenuCompuesto PrincipalUsuario { get; set; }
 
 
         public override void mostrar()
@@ -44,6 +44,14 @@ namespace consolaCajero
 
         public void instanciarMenuesPara(Cajero cajero)
         {
+            
+            var menuListaCajeros = new MenuListaCajeros() { Nombre = "Listado Cajeros" };
+            var menuAltaCajero = new MenuAltaCajero() { Nombre = "Alta Cajero" };
+            var menuAltaEntrada = new MenuAltaEntrada() { Nombre = "Alta Entrada" };
+
+            PrincipalUsuario = new MenuCompuesto() { Nombre = "Login" };
+            PrincipalUsuario.agregarMenu(MenuAltaCajero);
+
         }
     }
 }
