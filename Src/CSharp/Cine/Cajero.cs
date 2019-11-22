@@ -11,7 +11,7 @@ namespace Cine
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column("idCajero")]
-        public int Id { get; set; }
+        public int Dni { get; set; }
         [ForeignKey("idEntrada"), Required]
         public Entrada Entrada { get; set; }
         [Column("nombre"), StringLength(45), Required]

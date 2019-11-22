@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using NETCore.Encrypt;
 using Cine;
 using MenuesConsola;
@@ -12,7 +10,7 @@ namespace consolaCajero
     public class MenuAltaCajero : MenuComponente
 
     {
-        public Cajero Cajero { get; set; }
+       public Cajero Cajero { get; set; }
         public override void mostrar()
         {
             base.mostrar();
@@ -28,7 +26,7 @@ namespace consolaCajero
             {
                 Nombre = nombre,
                 Apellido = apellido,
-                Id = dni,
+                Dni = dni,
                 Contrasenia = pass,
                 Email = email,
             };

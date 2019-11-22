@@ -38,7 +38,7 @@ namespace Cine.Ado
 
         #region Cajero
         void altaCajero(Cajero cajero);
-        Cajero cajeroPorIdPass (short id, string passcajero);
+        Cajero cajeroPorDni (int dni, string pass);
         List<Cajero> ObtenerCajeros();
         #endregion
     }

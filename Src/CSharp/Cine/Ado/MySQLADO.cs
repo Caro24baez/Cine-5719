@@ -87,9 +87,9 @@ namespace Cine.Ado
             SaveChanges();
         }
 
-        public Cajero cajeroPorIdPass(short id, string passcajero) =>
-        Cajeros.FirstOrDefault(c => c.Id == id && c.Contrasenia == passcajero);
+        public Cajero cajeroPorDni(int dni, string passCajero) =>
+        Cajeros.FirstOrDefault(c => c.Dni == dni && c.Contrasenia == passCajero);
 
-
+       
     }
 }
