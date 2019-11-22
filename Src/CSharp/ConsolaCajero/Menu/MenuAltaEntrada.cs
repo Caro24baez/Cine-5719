@@ -19,6 +19,10 @@ namespace ConsolaCajero.Menu
             Nombre = "Lista Proyeccion";
         }
 
+        public MenuAltaEntrada()
+        {
+        }
+
         public override void mostrar()
         {
             base.mostrar();

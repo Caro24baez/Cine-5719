@@ -45,7 +45,6 @@ namespace consolaCajero.Menu
         {
             var menuListaProyeccion = new MenuListaProyeccion();
             var menuAltaEntrada = new MenuAltaEntrada() { Nombre = "Alta Entrada" };
-            menuAltaEntrada.
 
             var menuListaEntradas = new MenuListaEntradas() { Nombre = "Lista Entradas" , cajero = cajero};
 

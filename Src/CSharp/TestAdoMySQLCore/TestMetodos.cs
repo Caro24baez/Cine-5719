@@ -50,17 +50,16 @@ namespace TestAdoMySQLCore
 
             Assert.AreEqual(resulta2, -500);
 
-
         }
         [TestMethod]
         public void RealizarVentaEntrada()
         {
             var ado = new MySQLADO();
-            Entrada Entradas = new Entrada();
+            Entrada entradas = new Entrada();
             Pelicula pelicula = new Pelicula("Malefica");
             Proyeccion proyeccion = new Proyeccion();
+            ado.agregarPelicula(pelicula);
     
         }
-
     }
 }
