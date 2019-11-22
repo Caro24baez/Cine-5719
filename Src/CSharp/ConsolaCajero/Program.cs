@@ -1,7 +1,5 @@
 ﻿using MenuesConsola;
 using consolaCajero;
-using ConsolaCajero.Menu;
-using ProgramaGerente.Menu;
 
 namespace ConsolaCajero
 {
@@ -9,7 +7,6 @@ namespace ConsolaCajero
     {
         static void Main(string[] args)
         {
-
             var login = new Login() { Nombre = "Inicio Usuario" };
             login.mostrar();
         }
