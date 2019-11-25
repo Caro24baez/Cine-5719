@@ -12,7 +12,7 @@ namespace TestAdoMySQLCore
         [ClassInitialize]
         public static void SetUpClase(TestContext context)
         {
-            AdoMySQL = new MySQLADO();
+            AdoMySQL = FactoryAdoMySQL.GetAdoDesdeJson("appsettings.json", "root");
             AdoMySQL.Database.EnsureDeleted();
 
         }
