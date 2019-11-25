@@ -10,7 +10,7 @@ namespace ConsolaAdministrador.Menu
     {
         public override void imprimirElemento(Genero elemento)
         {
-            Console.WriteLine($"{elemento.genero}");
+            Console.WriteLine($"{elemento.Id} - {elemento.genero}");
         }
 
         public override List<Genero> obtenerLista() => AdoAdministrador.ADO.obtenerGeneros();
