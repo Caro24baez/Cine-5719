@@ -9,11 +9,29 @@ namespace ConsolaAdministrador
         static void Main(string[] args)
         {
             var menuAltaCajero = new MenuAltaCajero() { Nombre = "Alta Cajero" };
-            menuAltaCajero.mostrar();
-            var menuListaGeneros = new MenuListaGeneros() { Nombre = "Generos" };
-            menuListaGeneros.mostrar();
-            var menuListaPelicula = new MenuListaPelicula() { Nombre = "Pelicula" };
-            menuListaPelicula.mostrar();
+            var menuListaGeneros = new MenuListaGeneros() { Nombre = "Lista Generos" };
+            var menuListaPelicula = new MenuListaPelicula() { Nombre = "Lista Peliculas" };
+            var menuAgregarGeneros = new MenuListaGeneros() { Nombre = "Agregar Genero" };
+            var menuAgregarPelicula = new MenuListaPelicula() { Nombre = "Agregar Pelicula" };
+
+            var menupelicula = new MenuCompuesto() { Nombre = "Peliculas" };
+            menupelicula.agregarMenu(menuListaPelicula);
+            menupelicula.agregarMenu(menuAgregarPelicula);
+
+            var menuGenero = new MenuCompuesto() { Nombre = "Generos" };
+            menuGenero.agregarMenu(menuListaGeneros);
+            menuGenero.agregarMenu(menuAgregarGeneros);
+
+            var menuCajero = new MenuCompuesto() { Nombre = "Cajero" };
+            menuCajero.agregarMenu(menuAltaCajero);
+
+            var menuprincial = new MenuCompuesto { Nombre = "Menu Administrador"};
+            menuprincial.agregarMenu(menupelicula);
+            menuprincial.agregarMenu(menuGenero);
+            menuprincial.agregarMenu(menuCajero);
+
+            menuprincial.mostrar();
+
         }
     }
 }
