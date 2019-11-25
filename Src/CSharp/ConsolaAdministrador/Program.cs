@@ -8,8 +8,6 @@ namespace ConsolaAdministrador
     {
         static void Main(string[] args)
         {
-            
-            
             var menuAltaCajero = new MenuAltaCajero() { Nombre = "Alta Cajero" };
 
         }

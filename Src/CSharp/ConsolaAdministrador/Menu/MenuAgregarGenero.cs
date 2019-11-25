@@ -10,7 +10,7 @@ namespace ConsolaAdministrador.Menu
     {
         public Genero genero { get; set; }
 
-        public MenuListaGeneros  menuListaGeneros { get; set; }
+        public MenuListaGeneros  MenuListaGeneros { get; set; }
         public MenuAgregarGenero(MenuListaGeneros menuListaGeneros)
         {
             MenuListaGeneros = menuListaGeneros;
