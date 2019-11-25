@@ -5,7 +5,7 @@ using MenuesConsola;
 using static System.ReadLine;
 using ConsolaCajero;
 
-namespace consolaCajero
+namespace ConsolaAdministrador.Menu
 {
     public class MenuAltaCajero : MenuComponente
     {
