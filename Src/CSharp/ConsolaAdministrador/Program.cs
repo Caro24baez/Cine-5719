@@ -1,4 +1,6 @@
 ﻿using System;
+using MenuesConsola;
+using ConsolaAdministrador.Menu;
 
 namespace ConsolaAdministrador
 {
@@ -6,7 +8,9 @@ namespace ConsolaAdministrador
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var menuListaPelicula = new MenuListaPelicula() { Nombre = "Listado peliculas" };
+            var menuListaGenero = new MenuListaGeneros() { Nombre = "Listado de genero" };
+            var menuAltaCajero = new MenuAltaCajero()
         }
     }
 }

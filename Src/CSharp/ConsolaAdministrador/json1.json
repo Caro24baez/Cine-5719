@@ -1,7 +1,7 @@
 {
   "ConnectionStrings": {
     "root": "server=localhost;database=cine;user=root;password=root",
-    "administrador": "server=localhost;database=cine;user=administrador;password=root",
-    "cajero": "server=localhost;database=cine;user=cajero;password=root"
+    "administrador": "server=localhost;database=cine;user=administrador;password=passAdministrador",
+    "cajero": "server=localhost;database=cine;user=cajero;password=passCajero"
   }
 }
