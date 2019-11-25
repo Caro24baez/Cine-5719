@@ -58,7 +58,7 @@ namespace TestAdoMySQLCore
             Entrada entradas = new Entrada();
             Pelicula pelicula = new Pelicula("Malefica");
             Proyeccion proyeccion = new Proyeccion();
-            ado.agregarPelicula(pelicula);
+            
     
         }
     }
