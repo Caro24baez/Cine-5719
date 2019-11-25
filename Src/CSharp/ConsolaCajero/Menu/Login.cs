@@ -25,7 +25,7 @@ namespace consolaCajero.Menu
             {
                 if (Cajero is null)
                 {
-                    Console.WriteLine("Email es incorrecta");
+                    Console.WriteLine("El mail o la contraseña es incorrecta");
                     Console.ReadKey();
                 }
                 else
@@ -43,12 +43,12 @@ namespace consolaCajero.Menu
 
         public void instanciarMenuesPara(Cajero cajero)
         {
-            var menuListaProyeccion = new MenuListaProyeccion();
+            var menuListaProyeccion = new MenuListaProyeccion() { Nombre = "Alta Lista Proyyecciones"};
             var menuAltaEntrada = new MenuAltaEntrada() { Nombre = "Alta Entrada" };
 
             var menuListaEntradas = new MenuListaEntradas() { Nombre = "Lista Entradas" , cajero = cajero};
 
-            PrincipalUsuario = new MenuCompuesto() { Nombre = "Login" };
+            PrincipalUsuario = new MenuCompuesto() { Nombre = "Usuario" };
             PrincipalUsuario.agregarMenu(menuAltaEntrada);
             PrincipalUsuario.agregarMenu(menuListaEntradas);
 

@@ -20,4 +20,10 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

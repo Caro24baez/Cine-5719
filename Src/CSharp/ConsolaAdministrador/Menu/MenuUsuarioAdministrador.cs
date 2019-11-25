@@ -7,6 +7,5 @@ namespace ConsolaAdministrador.Menu
 {
     public class MenuUsuarioAdministrador
     {
-        public AdoAdministrador administrador { get; set; }
     }
 }
