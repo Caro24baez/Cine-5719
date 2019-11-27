@@ -11,16 +11,14 @@ namespace ConsolaCajero.Menu
     {
 
         public Entrada entrada { get; set; }
+        public Cajero cajero { get; set; }
         public MenuListaProyeccion menuListaProyeccion { get; set; }
 
-        public MenuAltaEntrada(MenuListaProyeccion menuListaProyeccion)
+        public MenuAltaEntrada(MenuListaProyeccion menuListaProyeccion, Cajero cajero)
         {
             this.menuListaProyeccion = menuListaProyeccion;
+            this.cajero = cajero;
             Nombre = "Lista Proyeccion";
-        }
-
-        public MenuAltaEntrada()
-        {
         }
 
         public override void mostrar()
@@ -29,7 +27,7 @@ namespace ConsolaCajero.Menu
             Console.WriteLine("Seleccione una Proyeccion x)");
             var proyeccion = menuListaProyeccion.seleccionarElemento();
 
-            entrada = new Entrada(proyeccion);
+            entrada = new Entrada(proyeccion, cajero);
             try
             {
                 AdoCajero.ADO.agregarEntrada(entrada);

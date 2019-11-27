@@ -44,9 +44,9 @@ namespace consolaCajero.Menu
         public void instanciarMenuesPara(Cajero cajero)
         {
             var menuListaProyeccion = new MenuListaProyeccion() { Nombre = "Alta Lista Proyyecciones"};
-            var menuAltaEntrada = new MenuAltaEntrada() { Nombre = "Alta Entrada" };
+            var menuAltaEntrada = new MenuAltaEntrada(menuListaProyeccion, Cajero) { Nombre = "Alta Entrada" };
 
-            var menuListaEntradas = new MenuListaEntradas() { Nombre = "Lista Entradas" , cajero = cajero};
+            var menuListaEntradas = new MenuListaEntradas() { Nombre = "Lista Entradas"};
 
             PrincipalUsuario = new MenuCompuesto() { Nombre = "Usuario" };
             PrincipalUsuario.agregarMenu(menuAltaEntrada);
