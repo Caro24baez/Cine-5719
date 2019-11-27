@@ -73,6 +73,13 @@ namespace Cine.Ado
 
         public List<Proyeccion> obtenerProyecciones() => Proyecciones.ToList();
 
+        public List<Proyeccion> obtenerProyeccionDe(Pelicula pelicula)
+        {
+            return Proyecciones
+                .Where(proyeccion => proyeccion.Pelicula == pelicula)
+                .ToList();
+        }
+
         public List<Entrada> obtenerEntradasParaCajero() => Entradas.ToList();
         public List<Entrada> proyeccionDe(Proyeccion proyeccion)
         {
