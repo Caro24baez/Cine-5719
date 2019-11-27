@@ -82,7 +82,7 @@ namespace Cine.Ado
 
         public List<Cajero> ObtenerCajeros() => Cajeros.ToList();
         
-        public void altaCajero(Cajero cajero)
+        public void agregarCajero(Cajero cajero)
         {
             Cajeros.Add(cajero);
             SaveChanges();
@@ -102,6 +102,11 @@ namespace Cine.Ado
         Cajeros.FirstOrDefault(c => c.Email == mail && c.Contrasenia == pass);
 
         public List<Genero> obtenerGeneros()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void agregarPeliculaGenero(PeliculaGenero peliculaGenero)
         {
             throw new NotImplementedException();
         }

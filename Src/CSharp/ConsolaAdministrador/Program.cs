@@ -31,7 +31,6 @@ namespace ConsolaAdministrador
             menuprincial.agregarMenu(menuCajero);
 
             menuprincial.mostrar();
-
         }
     }
 }

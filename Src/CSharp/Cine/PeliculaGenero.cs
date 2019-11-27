@@ -19,5 +19,11 @@ namespace Cine
         public byte Genero { get; set; }
         
         public PeliculaGenero() { }
+
+        public PeliculaGenero(byte idGenero, short idPelicula)
+        {
+            Pelicula = idPelicula;
+            Genero = idGenero;
+        }
     }
 }

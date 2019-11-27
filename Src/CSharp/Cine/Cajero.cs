@@ -9,7 +9,7 @@ namespace Cine
     [Table ("Cajero")]
     public class Cajero
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Key, Column("idCajero")]
         public int Dni { get; set; }
         [ForeignKey("idEntrada"), Required]
@@ -22,6 +22,16 @@ namespace Cine
         public string Email { get; set; }
         [Column("contrasenia"), StringLength(45), Required]
         public string Contrasenia { get; set; }
+
+        public Cajero(int dni, string nombre, string apellido, string email, string contrasenia)
+        {
+            Dni = dni;
+            Nombre = nombre;
+            Apellido = apellido;
+            Email = email;
+            Contrasenia = contrasenia;
+
+        }
 
         [NotMapped]
         public string NombreCompleto => $"{Apellido}, {Nombre}";

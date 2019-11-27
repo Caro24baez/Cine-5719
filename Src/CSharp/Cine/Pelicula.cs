@@ -26,10 +26,6 @@ namespace Cine
             Nombre = nombre;
             FechaLanzamiento = DateTime.Now;
         }
-        public void AgregarProyeccion(Proyeccion proyeccion)
-        {
-            Proyecciones.Add(proyeccion);
-        }
         
     }
 }
