@@ -13,7 +13,7 @@ namespace ConsolaAdministrador
             var menuListaPelicula = new MenuListaPelicula() { Nombre = "Lista Peliculas" };
             var menuAgregarGeneros = new MenuListaGeneros() { Nombre = "Agregar Genero" };
             var menuAgregarPelicula = new MenuListaPelicula() { Nombre = "Agregar Pelicula" };
-            var menuModificarBoleto = new MenuModificarBoleto() { Nombre = "Modificar boleto" };
+            var menuModificarPrecioPelicula = new MenuModificarPrecioPelicula() { Nombre = "Modificar boleto" };
 
             var menupelicula = new MenuCompuesto() { Nombre = "Peliculas" };
             menupelicula.agregarMenu(menuListaPelicula);
@@ -25,7 +25,7 @@ namespace ConsolaAdministrador
 
             var menuCajero = new MenuCompuesto() { Nombre = "Cajero" };
             menuCajero.agregarMenu(menuAltaCajero);
-            menuCajero.agregarMenu(menuModificarBoleto);
+            menuCajero.agregarMenu(menuModificarPrecioPelicula);
 
             var menuprincial = new MenuCompuesto { Nombre = "Menu Administrador"};
             menuprincial.agregarMenu(menupelicula);
