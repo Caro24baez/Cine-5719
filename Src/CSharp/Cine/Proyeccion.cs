@@ -21,7 +21,12 @@ namespace Cine
         public Sala Sala { get; set; }
         [Column("valor"), Required]
         public double Valor { get; set; }
-        
+
+        public void cambiarPrecioEntrada(object valor)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Entrada> Entradas { get; set; }
         public Proyeccion() {
 
@@ -55,6 +60,13 @@ namespace Cine
             Entrada entrada = new Entrada(this);
             Entradas.Add(entrada);
         
+        }
+
+        public void cambiarPrecioEntrada(float valor)
+        {
+            Valor = valor;
+            Entrada entrada = new Entrada(this);
+            Entradas.Add(entrada);
         }
     }
 }
