@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Cine;
 using MenuesConsola;
+using Cine;
 
 namespace ConsolaAdministrador.Menu
 {
-    public class MenuModificarBoleto : MenuListaPelicula
+    public class MenuModificarPrecioPelicula : MenuListaPelicula
     {
         private object valor;
 
@@ -44,6 +44,5 @@ namespace ConsolaAdministrador.Menu
                 }
             }
         }
-        
     }
 }
