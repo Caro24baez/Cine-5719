@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cine
 {
-    [Table ("Cajero")]
+    [Table("Cajero")]
     public class Cajero
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -22,6 +22,7 @@ namespace Cine
         public string Email { get; set; }
         [Column("contrasenia"), StringLength(45), Required]
         public string Contrasenia { get; set; }
+        public Cajero() { }
 
         public Cajero(int dni, string nombre, string apellido, string email, string contrasenia)
         {

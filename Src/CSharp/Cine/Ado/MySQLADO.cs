@@ -110,5 +110,15 @@ namespace Cine.Ado
         {
             throw new NotImplementedException();
         }
+
+        public void actualizarEntrada(Proyeccion proyeccion)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void altaCajero(Cajero cajero)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
