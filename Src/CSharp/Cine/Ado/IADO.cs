@@ -38,9 +38,13 @@ namespace Cine.Ado
         #endregion
 
         #region Cajero
-        void altaCajero(Cajero cajero);
+        void agregarCajero(Cajero cajero);
         Cajero cajeroPorMailyPass (string mail, string pass);
         List<Cajero> obtenerCajeros();
+        #endregion
+
+        #region PeliculaGenero
+        void agregarPeliculaGenero(PeliculaGenero peliculaGenero);
         #endregion
     }
 }

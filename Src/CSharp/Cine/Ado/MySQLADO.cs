@@ -10,7 +10,7 @@ namespace Cine.Ado
         public DbSet<Entrada> Entradas { get; set; }
         public DbSet<Genero> Generos { get; set; }
         public DbSet<Pelicula> Peliculas { get; set; }
-        public DbSet<PeliculaGenero> PeliculaGeneros { get; set; }
+        public DbSet<PeliculaGenero> PeliculasGeneros { get; set; }
         public DbSet<Proyeccion> Proyecciones { get; set; }
         public DbSet<Sala> Salas { get; set; }
         public DbSet<Cajero>Cajeros { get; set;}
@@ -24,7 +24,7 @@ namespace Cine.Ado
 
         internal MySQLADO(DbContextOptions dbo) : base(dbo) { }
 
-        public virtual void agregarPelicula(Pelicula pelicula)
+        public void agregarPelicula(Pelicula pelicula)
         {
             Peliculas.Add(pelicula);
             SaveChanges();
@@ -59,6 +59,18 @@ namespace Cine.Ado
             SaveChanges();
         }
 
+        public void agregarPeliculaGenero(PeliculaGenero peliculaGenero)
+        {
+            PeliculasGeneros.Add(peliculaGenero);
+            SaveChanges();
+        }
+
+        public void agregarCajero(Cajero cajero)
+        {
+            Cajeros.Add(cajero);
+            SaveChanges();
+        }
+
         public List<Proyeccion> obtenerProyecciones() => Proyecciones.ToList();
 
         public List<Entrada> obtenerEntradasParaCajero() => Entradas.ToList();
@@ -82,11 +94,6 @@ namespace Cine.Ado
 
         public List<Cajero> ObtenerCajeros() => Cajeros.ToList();
         
-        public void agregarCajero(Cajero cajero)
-        {
-            Cajeros.Add(cajero);
-            SaveChanges();
-        }
 
         public List<Cajero> obtenerCajeros()
         {
@@ -95,7 +102,7 @@ namespace Cine.Ado
 
         public List<Entrada> obtenerEntradasParaCajero(Cajero cajero)
         {
-            return Entradas.Where(x => x.cajero.Dni == cajero.Dni).Include(p => p.Proyeccion).ToList();
+            return Entradas.Where(x => x.Cajero.Dni == cajero.Dni).Include(p => p.Proyeccion).ToList();
         }
 
         public Cajero cajeroPorMailyPass(string mail, string pass) =>
@@ -106,19 +113,15 @@ namespace Cine.Ado
             throw new NotImplementedException();
         }
 
-        public void agregarPeliculaGenero(PeliculaGenero peliculaGenero)
-        {
-            throw new NotImplementedException();
-        }
+ 
 
         public void actualizarEntrada(Proyeccion proyeccion)
         {
             throw new NotImplementedException();
         }
 
-        public void altaCajero(Cajero cajero)
-        {
-            throw new NotImplementedException();
-        }
+
+
+
     }
 }
