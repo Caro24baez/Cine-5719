@@ -10,6 +10,7 @@ namespace ConsolaAdministrador.Menu
     {
         public float valor;
 
+        public Pelicula Pelicula { get; set; }
         public Proyeccion Proyeccion { get; set; }
 
         public override void mostrar()
@@ -17,7 +18,7 @@ namespace ConsolaAdministrador.Menu
             Console.Clear();
             Console.WriteLine();
 
-            //Proyeccion = seleccionarElemento();
+            Proyeccion = seleccionarElemento();
             Console.WriteLine();
             menuModificarPrecioPelicula();
         }
@@ -35,7 +36,7 @@ namespace ConsolaAdministrador.Menu
             {
                 try
                 {
-                    AdoAdministrador.ADO.actualizarEntrada(Proyeccion);
+                    AdoAdministrador.ADO.actualizarEntrada(Pelicula);
                     Console.WriteLine("Entrada actualizado con exito");
                 }
                 catch (Exception e)
