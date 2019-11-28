@@ -7,7 +7,7 @@ using ConsolaCajero.Menu;
 
 namespace consolaCajero.Menu
 {
-    public class Login : MenuCompuesto
+    public class Login : MenuComponente
     {
         public Cajero Cajero { get; set; }
         public MenuCompuesto PrincipalUsuario { get; set; }

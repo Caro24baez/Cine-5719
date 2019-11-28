@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsolaAdministrador.Menu
 {
-    public class MenuListaProyeccion
+    public class MenuAgregarSala
     {
     }
 }
