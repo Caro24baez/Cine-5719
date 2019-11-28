@@ -9,15 +9,14 @@ namespace ConsolaAdministrador.Menu
     public class MenuModificarPrecioPelicula : MenuListaPelicula
     {
         public float valor;
-
-        public Proyeccion Proyeccion { get; set; }
+        public Pelicula Pelicula { get; set; }
 
         public override void mostrar()
         {
             Console.Clear();
             Console.WriteLine();
 
-            //Proyeccion = seleccionarElemento();
+            Pelicula = seleccionarElemento();
             Console.WriteLine();
             menuModificarPrecioPelicula();
         }
@@ -28,14 +27,14 @@ namespace ConsolaAdministrador.Menu
             if (preguntaCerrada("¿Cambiar el precio?"))
             {
                 var precio = float.Parse(prompt("Precio Unitario"));
-                Proyeccion.cambiarPrecioEntrada(valor);
+                Pelicula.cambiarPrecioEntrada(valor);
                 cambio = true;
             }
             if (cambio)
             {
                 try
                 {
-                    AdoAdministrador.ADO.actualizarEntrada(Proyeccion);
+                    AdoAdministrador.ADO.actualizarEntrada(Pelicula);
                     Console.WriteLine("Entrada actualizado con exito");
                 }
                 catch (Exception e)
