@@ -41,12 +41,6 @@ namespace Cine.Ado
             SaveChanges();
         }
 
-        public void actualizarEntrada(Entrada entrada)
-        {
-            this.Update<Entrada>(entrada);
-            SaveChanges();
-        }
-
         public void agregarProyeccion(Proyeccion proyeccion)
         {
             Proyecciones.Add(proyeccion);
@@ -71,6 +65,13 @@ namespace Cine.Ado
             SaveChanges();
         }
 
+        public void actualizarEntrada(Entrada entrada)
+        {
+            this.Update<Entrada>(entrada);
+            SaveChanges();
+        }
+
+
         public List<Proyeccion> obtenerProyecciones() => Proyecciones.ToList();
 
         public List<Proyeccion> obtenerProyeccionDe(Pelicula pelicula)
@@ -91,17 +92,11 @@ namespace Cine.Ado
 
         public List<Pelicula> obtenerPeliculas() => Peliculas.ToList();
 
-        public List<Genero> obtenerGenero() => Generos.ToList();
-
         public void actualizar(Proyeccion proyeccion)
         {
             Proyecciones.Update(proyeccion);
             SaveChanges();
-        }
-
-        public List<Cajero> ObtenerCajeros() => Cajeros.ToList();
-        
-
+        }             
         public List<Cajero> obtenerCajeros()
         {
             throw new NotImplementedException();
@@ -113,22 +108,18 @@ namespace Cine.Ado
         }
 
         public Cajero cajeroPorMailyPass(string mail, string pass) =>
-        Cajeros.FirstOrDefault(c => c.Email == mail && c.Contrasenia == pass);
+        Cajeros.FirstOrDefault(c => c.Email == mail && c.Contrasenia == pass);       
 
-        public List<Genero> obtenerGeneros()
+        public List<Sala> obtenerSalas()
         {
             throw new NotImplementedException();
         }
-
- 
 
         public void actualizarEntrada(Proyeccion proyeccion)
         {
             throw new NotImplementedException();
         }
 
-
-
-
+        public List<Genero> obtenerGeneros() => Generos.ToList();
     }
 }

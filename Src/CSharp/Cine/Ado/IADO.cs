@@ -27,7 +27,7 @@ namespace Cine.Ado
 
         #region Sala
         void agregarSala(Sala sala);
-        //List<Sala> obtenerSalas();
+        List<Sala> obtenerSalas();
         #endregion
 
         #region Proyeccion

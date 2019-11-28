@@ -17,7 +17,7 @@ namespace ConsolaAdministrador.Menu
             Console.Clear();
             Console.WriteLine();
 
-            Proyeccion = seleccionarElemento();
+            //Proyeccion = seleccionarElemento();
             Console.WriteLine();
             menuModificarPrecioPelicula();
         }
