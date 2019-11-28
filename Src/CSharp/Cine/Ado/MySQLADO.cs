@@ -121,5 +121,10 @@ namespace Cine.Ado
         }
 
         public List<Genero> obtenerGeneros() => Generos.ToList();
+
+        public void actualizarEntrada(Pelicula pelicula)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
