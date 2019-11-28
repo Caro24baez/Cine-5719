@@ -19,10 +19,10 @@ namespace ConsolaAdministrador.Menu
 
             Proyeccion = seleccionarElemento();
             Console.WriteLine();
-            menuModificarBoleto();
+            menuModificarPrecioPelicula();
         }
 
-        private void menuModificarBoleto()
+        private void menuModificarPrecioPelicula()
         {
             bool cambio = true;
             if (preguntaCerrada("¿Cambiar el precio?"))
