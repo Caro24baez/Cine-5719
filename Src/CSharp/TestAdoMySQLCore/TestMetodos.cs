@@ -38,6 +38,7 @@ namespace TestAdoMySQLCore
 
             int num = unaSala.Piso;
             Assert.AreEqual(num, 1);
+
         }
     }
 }

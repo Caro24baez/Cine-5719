@@ -6,5 +6,6 @@ namespace ConsolaAdministrador.Menu
 {
     public class MenuAgregarSala
     {
+
     }
 }

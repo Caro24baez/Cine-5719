@@ -17,7 +17,7 @@ namespace consolaCajero.Menu
         {
             base.mostrar();
 
-            var mail = prompt("Ingrese mail: ");
+            var mail = prompt("Ingrese Email: ");
             var pass = ReadPassword("Ingrese contraseña: ");
             pass = EncryptProvider.Sha256(pass);
             try
