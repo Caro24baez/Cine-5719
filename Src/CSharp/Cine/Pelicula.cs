@@ -26,6 +26,10 @@ namespace Cine
             Nombre = nombre;
             FechaLanzamiento = DateTime.Now;
         }
-        
+
+        public void cambiarPrecioEntrada(float valor)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
