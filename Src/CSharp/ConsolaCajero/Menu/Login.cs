@@ -20,9 +20,9 @@ namespace consolaCajero.Menu
             var mail = prompt("Ingrese mail: ");
             var pass = ReadPassword("Ingrese contraseña: ");
             pass = EncryptProvider.Sha256(pass);
-            Cajero = ConsolaCajero.AdoCajero.ADO.cajeroPorMailyPass(mail, pass);
             try
             {
+                Cajero = ConsolaCajero.AdoCajero.ADO.cajeroPorMailyPass(mail, pass);
                 if (Cajero is null)
                 {
                     Console.WriteLine("El mail o la contraseña es incorrecta");
