@@ -17,12 +17,12 @@ namespace ConsolaAdministrador.Menu
             Console.Clear();
             Console.WriteLine();
 
-            Proyeccion = seleccionarElemento();
+            //Proyeccion = seleccionarElemento();
             Console.WriteLine();
-            menuModificarBoleto();
+            menuModificarPrecioPelicula();
         }
 
-        private void menuModificarBoleto()
+        private void menuModificarPrecioPelicula()
         {
             bool cambio = true;
             if (preguntaCerrada("¿Cambiar el precio?"))
