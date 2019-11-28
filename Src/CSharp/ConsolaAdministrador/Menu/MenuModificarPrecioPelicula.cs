@@ -9,24 +9,14 @@ namespace ConsolaAdministrador.Menu
     public class MenuModificarPrecioPelicula : MenuListaPelicula
     {
         public float valor;
-<<<<<<< HEAD
         public Pelicula Pelicula { get; set; }
-=======
-
-        public Pelicula Pelicula { get; set; }
-        public Proyeccion Proyeccion { get; set; }
->>>>>>> b6bc46fa588c1652c59ed8dbfacb271cd99038fd
 
         public override void mostrar()
         {
             Console.Clear();
             Console.WriteLine();
 
-<<<<<<< HEAD
             Pelicula = seleccionarElemento();
-=======
-            Proyeccion = seleccionarElemento();
->>>>>>> b6bc46fa588c1652c59ed8dbfacb271cd99038fd
             Console.WriteLine();
             menuModificarPrecioPelicula();
         }
