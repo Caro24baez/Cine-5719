@@ -36,7 +36,7 @@ namespace ConsolaAdministrador.Menu
             {
                 try
                 {
-                    AdoAdministrador.ADO.actualizarEntrada(Pelicula);
+                    AdoAdministrador.ADO.actualizarEntrada(Proyeccion);
                     Console.WriteLine("Entrada actualizado con exito");
                 }
                 catch (Exception e)

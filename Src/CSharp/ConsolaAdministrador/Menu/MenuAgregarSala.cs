@@ -9,7 +9,18 @@ namespace ConsolaAdministrador.Menu
     {
         public Sala Sala { get; set; }
 
-        //public MenuAgregarSala MenuAgregarSala { get; set; }
+       // public MenuAgregarSala MenuAgregarSala { get; set; }
 
+        //public MenuAgregarSala (MenuAgregarSala menuAgregarSala, )
+        //{
+        //    MenuAgregarSala = menuAgregarSala;
+
+
+        //}
+        //public override void mostrar()
+        //{
+        //    base.mostrar();
+        //    var Capacidad = prompt("Ingrese el nombre del Genero");
+        //}
     }
 }
