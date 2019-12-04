@@ -18,7 +18,7 @@ namespace ConsolaAdministrador.Menu
             Console.Clear();
             Console.WriteLine();
 
-            Pelicula = seleccionarElemento();
+            //Proyeccion = seleccionarElemento();
             Console.WriteLine();
             menuModificarPrecioPelicula();
         }
@@ -36,7 +36,7 @@ namespace ConsolaAdministrador.Menu
             {
                 try
                 {
-                    AdoAdministrador.ADO.actualizarEntrada(Pelicula);
+                    AdoAdministrador.ADO.actualizarEntrada(Proyeccion);
                     Console.WriteLine("Entrada actualizado con exito");
                 }
                 catch (Exception e)
