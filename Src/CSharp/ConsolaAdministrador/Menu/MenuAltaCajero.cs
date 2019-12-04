@@ -32,12 +32,12 @@ namespace ConsolaAdministrador.Menu
 
             try
             {
-                AdoCajero.ADO.agregarCajero(Cajero);
+                AdoAdministrador.ADO.agregarCajero(Cajero);
                 Console.WriteLine("Cajero dada de alta con exito");
             }
             catch (Exception e)
             {
-                Console.WriteLine($"No se pudo dar de alta: {e.Message}");
+                Console.WriteLine($"No se pudo dar de alta: {e.Message} - ");
             }
             Console.ReadKey();
         }

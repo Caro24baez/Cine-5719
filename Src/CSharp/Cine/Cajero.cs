@@ -22,7 +22,7 @@ namespace Cine
         [Column("email"), StringLength(45), Required]
         public string Email { get; set; }
 
-        [Column("contrasenia"), StringLength(45), Required]
+        [Column("contrasenia"), StringLength(65), Required]
         public string Contrasenia { get; set; }
 
         public Cajero() { }
