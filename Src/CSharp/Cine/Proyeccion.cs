@@ -55,12 +55,11 @@ namespace Cine
         {
             return Entradas.Count - Sala.Capacidad;
         }
-        //public void venderEntrada()
-        //{
-        //    Entrada entrada = new Entrada(this);
-        //    Entradas.Add(entrada);
-        
-        //}
+        public void venderEntrada(Cajero cajero)
+        {
+            Entrada entrada = new Entrada(this, cajero);
+            Entradas.Add(entrada);
+        }
 
         //public void cambiarPrecioEntrada(float valor)
         //{

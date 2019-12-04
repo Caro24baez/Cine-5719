@@ -72,7 +72,12 @@ namespace Cine.Ado
         }
 
 
-        public List<Proyeccion> obtenerProyecciones() => Proyecciones.ToList();
+        public List<Proyeccion> obtenerProyecciones()
+            => Proyecciones.
+                Include(p => p.Entradas).
+            Include(p => p.Pelicula).
+            Include(p => p.Sala).
+                ToList();
 
         public List<Proyeccion> obtenerProyeccionDe(Pelicula pelicula)
         {

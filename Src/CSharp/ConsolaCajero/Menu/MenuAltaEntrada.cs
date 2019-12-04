@@ -27,10 +27,10 @@ namespace ConsolaCajero.Menu
         public override void mostrar()
         {
             base.mostrar();
-            Console.WriteLine("Seleccione una Proyeccion x)");
+            Console.WriteLine("Seleccione una Proyeccion");
             var proyeccion = menuListaProyeccion.seleccionarElemento();
 
-            entrada = new Entrada(proyeccion, cajero);
+            proyeccion.venderEntrada(cajero);
             try
             {
                 AdoCajero.ADO.agregarEntrada(entrada);
