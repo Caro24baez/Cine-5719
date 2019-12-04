@@ -35,7 +35,6 @@ namespace Cine.Ado
         List<Proyeccion> obtenerProyecciones();
         void actualizar(Proyeccion proyeccion);
         void actualizarEntrada(Proyeccion proyeccion);
-        void actualizarEntrada(Pelicula pelicula);
         #endregion
 
         #region Cajero
