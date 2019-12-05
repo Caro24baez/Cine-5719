@@ -11,8 +11,8 @@ namespace ConsolaAdministrador.Menu
     {
         public Proyeccion Proyeccion { get; set; }
         public MenuListaProyeccion MenuListaProyeccion { get; set; }
-        //public MenuListaProyeccion ()
-        //{
-        //}
+        public MenuListaProyeccion ()
+        {
+        }
     }
 }
