@@ -9,6 +9,8 @@ namespace ConsolaAdministrador.Menu
     {
         public Sala Sala { get; set; }
 
+        public MenuListaSala menuListaSala { get; set; }
+        
         public override void mostrar()
         {
             base.mostrar();
