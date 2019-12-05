@@ -8,7 +8,6 @@ namespace ConsolaAdministrador.Menu
 {
     public class MenuModificarPrecioPelicula : MenuListaPelicula
     {
-        //public int valor;
 
         public Pelicula Pelicula { get; set; }
         public Proyeccion Proyeccion { get; set; }
@@ -18,7 +17,7 @@ namespace ConsolaAdministrador.Menu
             Console.Clear();
             Console.WriteLine();
 
-            //Proyeccion = seleccionarElemento();
+            Pelicula = seleccionarElemento();
             Console.WriteLine();
             menuModificarPrecioPelicula();
         }
