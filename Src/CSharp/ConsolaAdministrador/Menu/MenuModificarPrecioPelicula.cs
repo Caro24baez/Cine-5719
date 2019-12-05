@@ -8,7 +8,7 @@ namespace ConsolaAdministrador.Menu
 {
     public class MenuModificarPrecioPelicula : MenuListaPelicula
     {
-        public int valor;
+        //public int valor;
 
         public Pelicula Pelicula { get; set; }
         public Proyeccion Proyeccion { get; set; }
@@ -29,7 +29,7 @@ namespace ConsolaAdministrador.Menu
             if (preguntaCerrada("¿Cambiar el precio?"))
             {
                 var precio = int.Parse(prompt("Precio Unitario"));
-                Proyeccion.cambiarPrecioEntrada(valor);
+                Pelicula.cambiarPrecioEntrada(precio);
                 cambio = true;
             }
             if (cambio)

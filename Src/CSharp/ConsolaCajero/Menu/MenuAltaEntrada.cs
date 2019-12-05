@@ -13,10 +13,7 @@ namespace ConsolaCajero.Menu
         public Entrada entrada { get; set; }
         public Cajero cajero { get; set; }
         public MenuListaProyeccion menuListaProyeccion { get; set; }
-        public MenuAltaEntrada()
-        {
 
-        }
         public MenuAltaEntrada(MenuListaProyeccion menuListaProyeccion, Cajero cajero)
         {
             this.menuListaProyeccion = menuListaProyeccion;
