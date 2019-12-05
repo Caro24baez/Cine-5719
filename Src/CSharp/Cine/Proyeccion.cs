@@ -64,8 +64,8 @@ namespace Cine
         //public void cambiarPrecioEntrada(float valor)
         //{
         //    Valor = valor;
-        //    Entrada entrada = new Entrada(this);
-        //    Entradas.Add(entrada);
+        //   Entrada entrada = new Entrada(this);
+        //   Entradas.Add(entrada);
         //}
     }
 }
