@@ -15,5 +15,5 @@ namespace ConsolaAdministrador.Menu
         //    Console.WriteLine($"{elemento.Id}{elemento.Capacidad} {elemento.Piso}");
         //}
         //public override List<Sala> obtenerLista() => AdoAdministrador.ADO.obtenerSalas();
-    }
+    //}
 }

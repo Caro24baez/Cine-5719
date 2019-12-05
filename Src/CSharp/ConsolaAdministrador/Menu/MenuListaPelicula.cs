@@ -14,7 +14,5 @@ namespace ConsolaAdministrador.Menu
         }
 
         public override List<Pelicula> obtenerLista() => AdoAdministrador.ADO.obtenerPeliculas();
-
-
     }
 }

@@ -30,7 +30,7 @@ namespace TestAdoMySQLCore
             Proyeccion unaProyeccion = new Proyeccion(unaPelicula, unaSala, 180);
             ado.agregarProyeccion(unaProyeccion);
 
-            Cajero unCajero = new Cajero(94065533, "juan", "Paloma", "juanp@gmail.com", "1234");
+            Cajero unCajero = new Cajero(94065533, "juan", "Paloma", "juanp@gmail.com", "12345678");
             ado.agregarCajero(unCajero);
 
             Entrada unaEntrada = new Entrada(unaProyeccion, unCajero);
