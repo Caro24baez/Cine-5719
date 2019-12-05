@@ -20,6 +20,7 @@ namespace Cine.Ado
 
         #region Entrada
         void agregarEntrada(Entrada entrada);
+        List<Proyeccion> obtenerProyeccion();
         void actualizarEntrada(Entrada entrada);
         List<Entrada> obtenerEntradasParaCajero(Cajero cajero);
         //List<Proyeccion> proyeccionDe(Entrada entrada);

@@ -9,7 +9,6 @@ namespace ConsolaAdministrador.Menu
     public class MenuAgregarGenero : MenuComponente
     {
         public Genero genero { get; set; }
-
         public MenuListaGeneros  MenuListaGeneros { get; set; }
         public MenuAgregarGenero(MenuListaGeneros menuListaGeneros)
         {

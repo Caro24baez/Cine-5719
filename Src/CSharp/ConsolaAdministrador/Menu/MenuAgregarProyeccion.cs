@@ -10,10 +10,9 @@ namespace ConsolaAdministrador.Menu
     public class MenuAgregarProyeccion : MenuComponente
     {
         public Proyeccion Proyeccion { get; set; }
-        //public MenuListaProyeccion menuListaProyeccion { get; set;}
-        //public MenuListaProyeccion ( MenuListaProyeccion menuListaProyeccion)
-        //{
-
-        //}
+        public MenuListaProyeccion MenuListaProyeccion { get; set; }
+        public MenuListaProyeccion ()
+        {
+        }
     }
 }

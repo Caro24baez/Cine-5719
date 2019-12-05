@@ -15,14 +15,14 @@ namespace ConsolaAdministrador.Menu
         public MenuAgregarPelicula(MenuListaPelicula menuListaPelicula)
         {
             MenuListaPelicula = menuListaPelicula;
-            Nombre = "Agregar pelicula";
+            Nombre = "Agregar pelicula: ";
 
         }
 
         public override void mostrar()
         {
             base.mostrar();
-            var nombre = prompt("Ingrese el nombre de la pelicula");
+            var Nombre = prompt("Ingrese el nombre de la pelicula: ");
         }
     }
 }
