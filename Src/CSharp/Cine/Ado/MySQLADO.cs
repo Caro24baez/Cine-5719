@@ -131,5 +131,10 @@ namespace Cine.Ado
         {
             throw new NotImplementedException();
         }
+
+        public List<Proyeccion> obtenerProyeccion()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
