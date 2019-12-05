@@ -9,18 +9,31 @@ namespace ConsolaAdministrador.Menu
     {
         public Sala Sala { get; set; }
 
-       // public MenuAgregarSala MenuAgregarSala { get; set; }
+        public override void mostrar()
+        {
+            base.mostrar();
+            Console.WriteLine();
 
-        //public MenuAgregarSala (MenuAgregarSala menuAgregarSala, )
-        //{
-        //    MenuAgregarSala = menuAgregarSala;
+            var capacidad = Convert.ToInt16(prompt("Ingrese la capacidad de la sala"));
+            var piso = Convert.ToByte(prompt("Ingrese el numero piso de la sala"));
 
+            Sala = new Sala()
+            {
+                Capacidad = capacidad,
+                Piso = piso
+            };
 
-        //}
-        //public override void mostrar()
-        //{
-        //    base.mostrar();
-        //    var Capacidad = prompt("Ingrese el nombre del Genero");
-        //}
+            try
+            {
+                AdoAdministrador.ADO.agregarSala(Sala);
+                Console.WriteLine("Sala agregada con exito");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"No se pudo agregar la sala {e.Message}");
+            }
+
+            Console.ReadKey();
+        }
     }
 }
