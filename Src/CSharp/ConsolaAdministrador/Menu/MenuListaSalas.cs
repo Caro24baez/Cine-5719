@@ -1,9 +1,7 @@
-﻿using MenuesConsola;
-using Cine;
+﻿using Cine;
+using MenuesConsola;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using ConsolaAdministrador;
 
 namespace ConsolaAdministrador.Menu
 {
@@ -11,7 +9,7 @@ namespace ConsolaAdministrador.Menu
     {
         public override void imprimirElemento(Sala elemento)
         {
-            Console.WriteLine($"{elemento.Id}{elemento.Capacidad} {elemento.Piso}");
+            Console.WriteLine($"{elemento.Id} Capacidad: {elemento.Capacidad} Piso {elemento.Piso}°");
         }
         public override List<Sala> obtenerLista() => AdoAdministrador.ADO.obtenerSalas();
     }    

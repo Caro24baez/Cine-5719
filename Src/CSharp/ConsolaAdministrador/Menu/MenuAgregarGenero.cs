@@ -19,6 +19,6 @@ namespace ConsolaAdministrador.Menu
         {
             base.mostrar();
             var nombre = prompt("Ingrese el nombre del Genero");
-        }
+        }   
     }
 }

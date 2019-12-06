@@ -15,21 +15,17 @@ namespace Cine
         [Column("nombre"), StringLength(45), Required]
         public string Nombre { get; set; }
         [Column("fechaLanzamiento", TypeName = "Date" ), Required]
-        public DateTime FechaLanzamiento { get; set; }
+        public DateTime FechaLanzamiento { get; set; }        
         public List<Proyeccion> Proyecciones { get; set; }
         public Pelicula()
         {
             Proyecciones = new List<Proyeccion>();
         }
         public Pelicula(string nombre)
+        public Pelicula(string nombre) 
         {
             Nombre = nombre;
             FechaLanzamiento = DateTime.Now;
-        }
-
-        public void cambiarPrecioEntrada(float valor)
-        {
-            throw new NotImplementedException();
         }
     }
 }

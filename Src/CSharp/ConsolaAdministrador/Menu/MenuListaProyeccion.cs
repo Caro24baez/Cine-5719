@@ -13,6 +13,6 @@ namespace ConsolaAdministrador.Menu
         {
             Console.WriteLine($"{elemento.Id}-{elemento.Pelicula}-{elemento.FechaHora}-{elemento.Sala}-{elemento.Valor}");
         }
-        public override List<Proyeccion> obtenerLista() => AdoAdministrador.ADO.obtenerProyeccion();
+        public override List<Proyeccion> obtenerLista() => AdoAdministrador.ADO.obtenerProyecciones();
     }
 }

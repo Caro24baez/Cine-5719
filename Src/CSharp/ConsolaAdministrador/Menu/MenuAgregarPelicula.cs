@@ -23,6 +23,7 @@ namespace ConsolaAdministrador.Menu
         {
             base.mostrar();
             var Nombre = prompt("Ingrese el nombre de la pelicula: ");
+
         }
     }
 }

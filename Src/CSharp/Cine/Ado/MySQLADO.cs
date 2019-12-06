@@ -102,10 +102,7 @@ namespace Cine.Ado
             Proyecciones.Update(proyeccion);
             SaveChanges();
         }             
-        public List<Cajero> obtenerCajeros()
-        {
-            throw new NotImplementedException();
-        }
+        public List<Cajero> obtenerCajeros() => Cajeros.ToList();
 
         public List<Entrada> obtenerEntradasParaCajero(Cajero cajero)
         {
@@ -117,7 +114,8 @@ namespace Cine.Ado
 
         public List<Sala> obtenerSalas()
         {
-            throw new NotImplementedException();
+            return Salas.ToList();
+            
         }
 
         public void actualizarEntrada(Proyeccion proyeccion)

@@ -28,7 +28,6 @@ namespace ConsolaAdministrador.Menu
             if (preguntaCerrada("¿Cambiar el precio?"))
             {
                 var precio = int.Parse(prompt("Precio Unitario"));
-                Pelicula.cambiarPrecioEntrada(precio);
                 cambio = true;
             }
             if (cambio)
