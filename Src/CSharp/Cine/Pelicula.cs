@@ -21,7 +21,6 @@ namespace Cine
         {
             Proyecciones = new List<Proyeccion>();
         }
-        public Pelicula(string nombre)
         public Pelicula(string nombre) 
         {
             Nombre = nombre;
