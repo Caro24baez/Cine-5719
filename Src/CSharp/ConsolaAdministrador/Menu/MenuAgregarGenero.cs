@@ -8,17 +8,34 @@ namespace ConsolaAdministrador.Menu
 {
     public class MenuAgregarGenero : MenuComponente
     {
-        public Genero genero { get; set; }
+        public Genero Genero { get; set; }
         public MenuListaGeneros  MenuListaGeneros { get; set; }
         public MenuAgregarGenero(MenuListaGeneros menuListaGeneros)
         {
             MenuListaGeneros = menuListaGeneros;
-            Nombre = "Agreagar Generos";
+            Nombre = "Agregar Generos";
         }
         public override void mostrar()
         {
             base.mostrar();
-            var nombre = prompt("Ingrese el nombre del Genero");
+            var genero = prompt("Ingrese el nombre del Genero");
+          
+            Genero = new Genero()
+            {
+                genero = genero
+            };
+
+            try
+            {
+                AdoAdministrador.ADO.agregarGenero(Genero);
+                Console.WriteLine("Genero agregado con exito");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"No se pudo agregar el genero {e.Message}");
+            }
+
+            Console.ReadKey();
         }   
     }
 }
