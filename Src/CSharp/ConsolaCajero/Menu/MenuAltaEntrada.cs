@@ -1,8 +1,9 @@
 ﻿using System;
+using NETCore.Encrypt;
 using Cine;
-using ConsolaCajero;
-using static System.ReadLine;
 using MenuesConsola;
+using static System.ReadLine;
+using ConsolaCajero;
 
 
 namespace ConsolaCajero.Menu
@@ -24,10 +25,18 @@ namespace ConsolaCajero.Menu
         public override void mostrar()
         {
             base.mostrar();
-            Console.WriteLine("Seleccione una Proyeccion");
-            var proyeccion = menuListaProyeccion.seleccionarElemento();
 
-            proyeccion.venderEntrada(cajero);
+            var proyeccion = prompt("Ingrese una Proyeccion: ");
+            var cajero = prompt("Ingrese un Cajero: ");
+            var valor = prompt("Ingrese el Valor de La entrada: ");
+            var fechaHora = 
+
+            entrada = new Entrada()
+            {
+                Proyeccion = proyeccion,
+                Cajero = cajero,
+                Valor = valor,
+            };
             try
             {
                 AdoCajero.ADO.agregarEntrada(entrada);
