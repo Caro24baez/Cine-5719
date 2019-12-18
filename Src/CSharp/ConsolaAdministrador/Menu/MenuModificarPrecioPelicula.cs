@@ -24,7 +24,7 @@ namespace ConsolaAdministrador.Menu
 
         private void menuModificarPrecioPelicula()
         {
-            bool cambio = true;
+            bool cambio = false;
             if (preguntaCerrada("¿Cambiar el precio?"))
             {
                 var precio = int.Parse(prompt("Precio Unitario"));
@@ -41,6 +41,7 @@ namespace ConsolaAdministrador.Menu
                 {
                     Console.WriteLine($"No se pudo modificar por: {e.InnerException.Message}");
                 }
+                Console.ReadKey();
             }
         }
     }

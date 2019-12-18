@@ -12,8 +12,8 @@ namespace ConsolaAdministrador
             var menuListaGeneros = new MenuListaGeneros() { Nombre = "Lista Generos" };
             var menuListaPelicula = new MenuListaPelicula() { Nombre = "Lista Peliculas" };
             var menuListaSala = new MenuListaSala() { Nombre = "Lista Salas" };
-            var menuAgregarGeneros = new MenuListaGeneros() { Nombre = "Agregar Genero" };
-            var menuAgregarPelicula = new MenuListaPelicula() { Nombre = "Agregar Pelicula" };
+            var menuAgregarGeneros = new MenuAgregarGenero (menuListaGeneros) { Nombre = "Agregar Genero" };
+            var menuAgregarPelicula = new MenuAgregarPelicula(menuListaPelicula) { Nombre = "Agregar Pelicula" };
             var menuAgregarSala = new MenuAgregarSala() { Nombre = "Agregar Sala" };
             var menuModificarPrecioPelicula = new MenuModificarPrecioPelicula() { Nombre = "Modificar Precio de la Pelicula" };
 

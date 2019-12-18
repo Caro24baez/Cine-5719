@@ -22,7 +22,25 @@ namespace ConsolaAdministrador.Menu
         public override void mostrar()
         {
             base.mostrar();
-            var Nombre = prompt("Ingrese el nombre de la pelicula: ");
+
+            var pelicula = prompt("Ingrese el nombre de la pelicula: ");
+
+            Pelicula = new Pelicula()
+            {
+                Nombre = pelicula
+            };
+             try
+            {
+                AdoAdministrador.ADO.agregarPelicula(Pelicula);
+                Console.WriteLine("Pelicula agregado con exito");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"No se pudo agregar la pelicula :{e.Message}");
+            }
+
+            Console.ReadKey();
+
 
         }
     }

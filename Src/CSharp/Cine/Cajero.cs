@@ -34,7 +34,6 @@ namespace Cine
             Apellido = apellido;
             Email = email;
             Contrasenia = contrasenia;
-
         }
 
         [NotMapped]

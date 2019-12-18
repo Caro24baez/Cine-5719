@@ -61,7 +61,7 @@ namespace Cine
             Entradas.Add(entrada);
         }
 
-        //public void cambiarPrecioEntrada(float valor)
+        //public void cambiarPrecioEntrada(float valor);
         //{
         //    Valor = valor;
         //   Entrada entrada = new Entrada(this);
