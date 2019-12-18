@@ -32,7 +32,7 @@ namespace ConsolaAdministrador.Menu
             }
             catch (Exception e)
             {
-                Console.WriteLine($"No se pudo agregar el genero {e.Message}");
+                Console.WriteLine($"No se pudo agregar el genero :{e.Message}");
             }
 
             Console.ReadKey();
