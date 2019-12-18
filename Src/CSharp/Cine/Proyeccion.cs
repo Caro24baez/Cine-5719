@@ -22,9 +22,9 @@ namespace Cine
         [Column("valor"), Required]
         public double Valor { get; set; }
 
-        public void cambiarPrecioEntrada(object valor)
+        public void cambiarPrecioEntrada(double valor)
         {
-            throw new NotImplementedException();
+            Valor = valor;
         }
 
         public List<Entrada> Entradas { get; set; }
@@ -61,11 +61,6 @@ namespace Cine
             Entradas.Add(entrada);
         }
 
-        //public void cambiarPrecioEntrada(float valor);
-        //{
-        //    Valor = valor;
-        //   Entrada entrada = new Entrada(this);
-        //   Entradas.Add(entrada);
-        //}
+        
     }
 }

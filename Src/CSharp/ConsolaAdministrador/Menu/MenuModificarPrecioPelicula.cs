@@ -30,6 +30,7 @@ namespace ConsolaAdministrador.Menu
                 var precio = int.Parse(prompt("Precio Unitario"));
                 cambio = true;
             }
+
             if (cambio)
             {
                 try
