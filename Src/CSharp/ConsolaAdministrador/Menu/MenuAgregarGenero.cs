@@ -18,7 +18,10 @@ namespace ConsolaAdministrador.Menu
         public override void mostrar()
         {
             base.mostrar();
+            
             var genero = prompt("Ingrese el nombre del Genero");
+            Console.WriteLine("Seleccione una categoria x)");
+            var categoria = MenuListaGeneros.seleccionarElemento();
           
             Genero = new Genero()
             {
