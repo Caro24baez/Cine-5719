@@ -21,7 +21,7 @@ namespace ConsolaAdministrador.Menu
             
             var genero = prompt("Ingrese el nombre del Genero");
             Console.WriteLine("Seleccione una categoria x)");
-            var categoria = MenuListaGeneros.seleccionarElemento();
+            var Genero = MenuListaGeneros.seleccionarElemento();
           
             Genero = new Genero()
             {
