@@ -6,5 +6,6 @@ namespace ConsolaCajero
     {
             public static IADO ADO { get; set; } =
             FactoryAdoMySQL.GetAdoDesdeJson("appsettings.json", "cajero");
+
     }
 }

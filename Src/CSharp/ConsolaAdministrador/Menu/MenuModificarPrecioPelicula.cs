@@ -11,6 +11,18 @@ namespace ConsolaAdministrador.Menu
 
         public Pelicula Pelicula { get; set; }
         public Proyeccion Proyeccion { get; set; }
+        public MenuListaProyeccion menuListaProyeccion { get; set; }
+
+        public MenuModificarPrecioPelicula (MenuListaProyeccion menuListaProyeccion, Pelicula pelicula)
+        {
+            this.menuListaProyeccion = menuListaProyeccion;
+            this.Pelicula = pelicula;
+        }
+
+        public MenuModificarPrecioPelicula()
+        {
+
+        }
 
         public override void mostrar()
         {
@@ -18,16 +30,15 @@ namespace ConsolaAdministrador.Menu
             Console.WriteLine();
 
             Pelicula = seleccionarElemento();
-            Console.WriteLine();
-            menuModificarPrecioPelicula();
+            Proyeccion = menuListaProyeccion.seleccionarElemento();
         }
 
-        private void menuModificarPrecioPelicula()
+        public void menuModificarPrecioPelicula()
         {
             bool cambio = false;
             if (preguntaCerrada("¿Cambiar el precio?"))
             {
-                var precio = int.Parse(prompt("Precio Unitario"));
+                var precio = double.Parse(prompt("Precio Unitario"));
                 cambio = true;
             }
 
@@ -35,12 +46,12 @@ namespace ConsolaAdministrador.Menu
             {
                 try
                 {
-                    AdoAdministrador.ADO.actualizarEntrada(Proyeccion);
+                    AdoAdministrador.ADO.actualizarProyeccion(Proyeccion);
                     Console.WriteLine("Entrada actualizado con exito");
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"No se pudo modificar por: {e.InnerException.Message}");
+                    Console.WriteLine($"No se pudo modificar por: {e.Message}");
                 }
                 Console.ReadKey();
             }

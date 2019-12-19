@@ -11,7 +11,6 @@ namespace ConsolaCajero.Menu
     public class MenuAltaEntrada : MenuComponente
     {
 
-        public Entrada entrada { get; set; }
         public Cajero Cajero { get; set; }
         public MenuListaProyeccion menuListaProyeccion { get; set; }
 
@@ -30,15 +29,10 @@ namespace ConsolaCajero.Menu
             var proyeccion = menuListaProyeccion.seleccionarElemento();
             var valor = double.Parse(prompt("Ingrese precio unitario"));
 
-            entrada = new Entrada()
-            {
-                Proyeccion = proyeccion,
-                Cajero = Cajero,
-                Valor = valor
-            };
+            proyeccion.venderEntrada(Cajero);
             try
             {
-                AdoCajero.ADO.agregarEntrada(entrada);
+                
                 Console.WriteLine("Producto dado de alta con exito");
             }
             catch (Exception e)

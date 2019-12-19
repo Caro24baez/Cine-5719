@@ -65,12 +65,6 @@ namespace Cine.Ado
             SaveChanges();
         }
 
-        public void actualizarEntrada(Entrada entrada)
-        {
-            this.Update<Entrada>(entrada);
-            SaveChanges();
-        }
-
 
         public List<Proyeccion> obtenerProyecciones()
             => Proyecciones.
@@ -125,9 +119,16 @@ namespace Cine.Ado
 
         public List<Genero> obtenerGeneros() => Generos.ToList();
 
-        public void actualizarEntrada(Pelicula pelicula)
+
+        public void actualizarProyeccion(Proyeccion proyeccion)
         {
-            throw new NotImplementedException();
+            Attach<Proyeccion>(proyeccion);
+            SaveChanges();
+        }
+
+        public List<Proyeccion> ProyeccionDe(Pelicula pelicula)
+        {
+            return Proyecciones.ToList();
         }
     }
 }

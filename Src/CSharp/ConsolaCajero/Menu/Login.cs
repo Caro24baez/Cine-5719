@@ -3,9 +3,8 @@ using MenuesConsola;
 using NETCore.Encrypt;
 using Cine;
 using static System.ReadLine;
-using ConsolaCajero.Menu;
 
-namespace consolaCajero.Menu
+namespace ConsolaCajero.Menu
 {
     public class Login : MenuComponente
     {
@@ -43,9 +42,8 @@ namespace consolaCajero.Menu
 
         public void instanciarMenuesPara(Cajero cajero)
         {
-            var menuListaProyeccion = new MenuListaProyeccion() { Nombre = "Alta Lista Proyecciones"};
+            var menuListaProyeccion = new MenuListaProyeccion() { Nombre = "Alta Lista Proyecciones", ADO=AdoCajero.ADO};
             var menuAltaEntrada = new MenuAltaEntrada(menuListaProyeccion, Cajero) { Nombre = "Alta Entrada" };
-
             var menuListaEntradas = new MenuListaEntradas() { Nombre = "Lista Entradas"};
 
             PrincipalUsuario = new MenuCompuesto() { Nombre = "Usuario" };

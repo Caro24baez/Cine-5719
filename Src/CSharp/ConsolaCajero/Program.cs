@@ -1,6 +1,6 @@
 ﻿using MenuesConsola;
-using consolaCajero;
-using consolaCajero.Menu;
+using ConsolaCajero;
+using ConsolaCajero.Menu;
 
 namespace ConsolaCajero
 {
