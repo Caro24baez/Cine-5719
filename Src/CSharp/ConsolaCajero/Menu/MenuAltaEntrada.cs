@@ -12,13 +12,13 @@ namespace ConsolaCajero.Menu
     {
 
         public Entrada entrada { get; set; }
-        public Cajero cajero { get; set; }
+        public Cajero Cajero { get; set; }
         public MenuListaProyeccion menuListaProyeccion { get; set; }
 
         public MenuAltaEntrada(MenuListaProyeccion menuListaProyeccion, Cajero cajero)
         {
             this.menuListaProyeccion = menuListaProyeccion;
-            this.cajero = cajero;
+            this.Cajero = cajero;
             Nombre = "Lista Proyeccion";
         }
 
@@ -27,16 +27,14 @@ namespace ConsolaCajero.Menu
             base.mostrar();
 
             var dni = Convert.ToInt32("Ingrese DNI");
-            var proyeccion = prompt("Ingrese una Proyeccion: ");
-            var cajero = prompt("Ingrese un Cajero: ");
-            var valor = prompt("Ingrese el Valor de La entrada: ");
-            var fechaHora = Convert.ToDateTime(prompt("Ingrese Fecha AAAA/MM/DD y hora HH:HH"));
+            var proyeccion = menuListaProyeccion.seleccionarElemento();
+            var valor = double.Parse(prompt("Ingrese precio unitario"));
 
             entrada = new Entrada()
             {
                 Proyeccion = proyeccion,
-                Cajero = cajero,
-                Valor = valor,
+                Cajero = Cajero,
+                Valor = valor
             };
             try
             {
