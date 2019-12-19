@@ -26,10 +26,11 @@ namespace ConsolaCajero.Menu
         {
             base.mostrar();
 
+            var dni = Convert.ToInt32("Ingrese DNI");
             var proyeccion = prompt("Ingrese una Proyeccion: ");
             var cajero = prompt("Ingrese un Cajero: ");
             var valor = prompt("Ingrese el Valor de La entrada: ");
-            var fechaHora = 
+            var fechaHora = Convert.ToDateTime(prompt("Ingrese Fecha AAAA/MM/DD y hora HH:HH"));
 
             entrada = new Entrada()
             {
