@@ -53,7 +53,7 @@ namespace Cine
         }
         public int EntradasDisponibles()
         {
-            return Entradas.Count - Sala.Capacidad;
+            return Sala.Capacidad - Entradas.Count;
         }
         public void venderEntrada(Cajero cajero)
         {

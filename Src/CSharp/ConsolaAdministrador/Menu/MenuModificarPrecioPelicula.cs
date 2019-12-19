@@ -11,17 +11,16 @@ namespace ConsolaAdministrador.Menu
 
         public Pelicula Pelicula { get; set; }
         public Proyeccion Proyeccion { get; set; }
-        public MenuListaProyeccion menuListaProyeccion { get; set; }
+        public MenuListaProyeccion menuListaProyeccion { get; set; } = new MenuListaProyeccion();
 
         public MenuModificarPrecioPelicula (MenuListaProyeccion menuListaProyeccion, Pelicula pelicula)
         {
             this.menuListaProyeccion = menuListaProyeccion;
-            this.Pelicula = pelicula;
+            Pelicula = pelicula;
         }
 
         public MenuModificarPrecioPelicula()
         {
-
         }
 
         public override void mostrar()

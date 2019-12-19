@@ -42,13 +42,10 @@ namespace ConsolaCajero.Menu
 
         public void instanciarMenuesPara(Cajero cajero)
         {
-            var menuListaProyeccion = new MenuListaProyeccion() { Nombre = "Alta Lista Proyecciones", ADO=AdoCajero.ADO};
-            var menuAltaEntrada = new MenuAltaEntrada(menuListaProyeccion, Cajero) { Nombre = "Alta Entrada" };
-            var menuListaEntradas = new MenuListaEntradas() { Nombre = "Lista Entradas"};
+            var menuAltaEntrada = new MenuAltaEntrada(Cajero) { Nombre = "Alta Entrada" };            
 
             PrincipalUsuario = new MenuCompuesto() { Nombre = "Usuario" };
             PrincipalUsuario.agregarMenu(menuAltaEntrada);
-            PrincipalUsuario.agregarMenu(menuListaEntradas);
 
         }
     }

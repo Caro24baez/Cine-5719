@@ -12,11 +12,12 @@ namespace ConsolaCajero.Menu
     {
 
         public Cajero Cajero { get; set; }
-        public MenuListaProyeccion menuListaProyeccion { get; set; }
 
-        public MenuAltaEntrada(MenuListaProyeccion menuListaProyeccion, Cajero cajero)
+        public MenuListaProyeccion menuListaProyeccion { get; set; }
+        public MenuListaPelicula menuListaPelicula { get; set; } = new MenuListaPelicula();
+
+        public MenuAltaEntrada(Cajero cajero)
         {
-            this.menuListaProyeccion = menuListaProyeccion;
             this.Cajero = cajero;
             Nombre = "Lista Proyeccion";
         }
@@ -25,24 +26,23 @@ namespace ConsolaCajero.Menu
         {
             base.mostrar();
 
-            var dni = Convert.ToInt32("Ingrese DNI");
+            var pelicula = menuListaPelicula.seleccionarElemento();
+            menuListaProyeccion = new MenuListaProyeccion() { Pelicula = pelicula };
             var proyeccion = menuListaProyeccion.seleccionarElemento();
-            var valor = double.Parse(prompt("Ingrese precio unitario"));
 
             proyeccion.venderEntrada(Cajero);
+
             try
             {
-                
-                Console.WriteLine("Producto dado de alta con exito");
+                AdoCajero.ADO.actualizarProyeccion(proyeccion);
+                Console.WriteLine("Entrada vendida con exito");
+                Console.ReadKey();
             }
             catch (Exception e)
             {
-                Console.WriteLine($"No se pudo dar de alta el producto: {e.Message}");
+                Console.WriteLine($"No se pudo dar de alta la entrada: {e.Message}");
             }
         }
-
-
-    }  
-     
+    }       
 }
  

@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Cine;
 using MenuesConsola;
-using Cine;
-using Cine.Ado;
+using System;
+using System.Collections.Generic;
 
 namespace ConsolaCajero.Menu
 {
     public class MenuListaProyeccion : MenuListador<Proyeccion>
     {
-        public IADO ADO { get; set; }
+        public Pelicula Pelicula { get; set; }
 
         public override void imprimirElemento(Proyeccion elemento)
-           => Console.WriteLine($"{elemento.Id} - Pelicula: {elemento.Pelicula.Nombre} - Precio: {elemento.Valor}");
+           => Console.WriteLine($"{elemento.FechaHora} - Precio: {elemento.Valor} - Entradas Disponiles {elemento.EntradasDisponibles()}");
 
-        public override List<Proyeccion> obtenerLista() => AdoCajero.ADO.obtenerProyecciones();
+        public override List<Proyeccion> obtenerLista() => AdoCajero.ADO.ProyeccionDe(Pelicula);
     }
 }

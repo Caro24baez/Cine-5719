@@ -127,8 +127,9 @@ namespace Cine.Ado
         }
 
         public List<Proyeccion> ProyeccionDe(Pelicula pelicula)
-        {
-            return Proyecciones.ToList();
-        }
+         => Proyecciones.
+            Include(p => p.Sala).
+            Where(p => p.Pelicula.id == pelicula.id).
+            ToList();
     }
 }
