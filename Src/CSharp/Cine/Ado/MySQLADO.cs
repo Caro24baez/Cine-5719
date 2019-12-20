@@ -133,5 +133,9 @@ namespace Cine.Ado
             Include(p => p.Sala).
             Where(p => p.Pelicula.id == pelicula.id).
             ToList();
+        public List<Entrada> entradasVendidaspor(Cajero cajero)
+        {
+            return Entradas.Where(x => x.Cajero.Dni == cajero.Dni).Include(p => p.Cajero == cajero).ToList();
+        }
     }
 }
