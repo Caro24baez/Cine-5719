@@ -40,6 +40,11 @@ namespace Cine
             FechaHora = DateTime.Now;
         }
 
+        public void cambiarPrecioEntrada(float valor)
+        {
+            this.Valor = valor;
+        }
+
         public bool horaFuncion(DateTime inicio, DateTime fin) 
         {
             return inicio <= FechaHora && FechaHora <= fin;

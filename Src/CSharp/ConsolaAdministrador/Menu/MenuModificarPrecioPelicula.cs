@@ -29,30 +29,19 @@ namespace ConsolaAdministrador.Menu
 
             Pelicula = seleccionarElemento();
             Proyeccion = menuListaProyeccion.seleccionarElemento();
-        }
+            var Valor = Convert.ToDouble(prompt("Cambiar precio"));
 
-        public void menuModificarPrecioPelicula()
-        {
-            bool cambio = false;
-            if (preguntaCerrada("¿Cambiar el precio?"))
+            Proyeccion.cambiarPrecioEntrada(Valor);
+            try
             {
-                var precio = double.Parse(prompt("Precio Unitario"));
-                cambio = true;
+                AdoAdministrador.ADO.actualizarProyeccion(Proyeccion);
+                Console.WriteLine("Entrada actualizado con exito");
             }
-
-            if (cambio)
+            catch (Exception e)
             {
-                try
-                {
-                    AdoAdministrador.ADO.actualizarProyeccion(Proyeccion);
-                    Console.WriteLine("Entrada actualizado con exito");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine($"No se pudo modificar por: {e.Message}");
-                }
-                Console.ReadKey();
+                Console.WriteLine($"No se pudo modificar por: {e.Message}");
             }
+            Console.ReadKey();
         }
     }
 }
