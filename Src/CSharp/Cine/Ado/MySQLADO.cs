@@ -13,7 +13,7 @@ namespace Cine.Ado
         public DbSet<PeliculaGenero> PeliculasGeneros { get; set; }
         public DbSet<Proyeccion> Proyecciones { get; set; }
         public DbSet<Sala> Salas { get; set; }
-        public DbSet<Cajero>Cajeros { get; set;}
+        public DbSet<Cajero> Cajeros { get; set; }
 
         public MySQLADO() : base() { }
 
@@ -95,7 +95,7 @@ namespace Cine.Ado
         {
             Proyecciones.Update(proyeccion);
             SaveChanges();
-        }             
+        }
         public List<Cajero> obtenerCajeros() => Cajeros.ToList();
 
         public List<Entrada> obtenerEntradasParaCajero(Cajero cajero)
@@ -104,12 +104,12 @@ namespace Cine.Ado
         }
 
         public Cajero cajeroPorMailyPass(string mail, string pass) =>
-        Cajeros.FirstOrDefault(c => c.Email == mail && c.Contrasenia == pass);       
+        Cajeros.FirstOrDefault(c => c.Email == mail && c.Contrasenia == pass);
 
         public List<Sala> obtenerSalas()
         {
             return Salas.ToList();
-            
+
         }
 
         public void actualizarEntrada(Proyeccion proyeccion)
@@ -136,6 +136,11 @@ namespace Cine.Ado
         public List<Entrada> entradasVendidaspor(Cajero cajero)
         {
             return Entradas.Where(x => x.Cajero.Dni == cajero.Dni).Include(p => p.Cajero == cajero).ToList();
+        }
+
+        public List<Proyeccion> ProyeccionesEn(Sala sala)
+        {
+            return Proyecciones.Where(x => x.Sala == sala).Include(p => p.Sala == sala).ToList();
         }
     }
 }
