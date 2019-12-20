@@ -14,16 +14,14 @@ namespace Cine
         public byte Id { get; set; }
         [Column("piso")]
         public byte Piso { get; set; }
-
         [Column("capacidad")]
         public short Capacidad { get; set; }
-
         public Sala() { }
-
         public Sala(byte piso, short capacidad)
         {
-            Piso = piso;
-            Capacidad = capacidad;
+            this.Piso = piso;
+            this.Capacidad = capacidad;
         }
+        public string cad => ($"Piso:{Piso} Capacidad:{Capacidad}");        
     }
 }

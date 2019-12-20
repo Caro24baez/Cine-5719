@@ -11,9 +11,9 @@ namespace ConsolaAdministrador.Menu
     public class MenuListaProyeccion : MenuListador<Proyeccion>
     {
         public IADO ADO { get; set; }
-        public override void imprimirElemento(Proyeccion elemento)
+        public override void imprimirElemento(Proyeccion p)
         {
-            Console.WriteLine($"{elemento.Id}-{elemento.Pelicula}-{elemento.FechaHora}-{elemento.Sala}-{elemento.Valor}");
+            Console.WriteLine($"{p.Id} Pelicula:{p.Pelicula} FechaHora:{p.FechaHora} Sala:{p.Sala} Precio:{p.Valor}");
         }
         public override List<Proyeccion> obtenerLista() => AdoAdministrador.ADO.obtenerProyecciones();
 

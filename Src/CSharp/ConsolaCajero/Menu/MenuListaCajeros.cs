@@ -16,4 +16,3 @@ namespace ProgramaGerente.Menu
         public override List<Cajero> obtenerLista() => AdoCajero.ADO.obtenerCajeros();
     }
 }
-
