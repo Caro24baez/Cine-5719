@@ -20,13 +20,11 @@ namespace ConsolaAdministrador.Menu
             base.mostrar();
             
             var genero = prompt("Ingrese el nombre del Genero");
-          
-          
+                   
             Genero = new Genero()
             {
                 genero = genero
             };
-
             try
             {
                 AdoAdministrador.ADO.agregarGenero(Genero);
@@ -36,7 +34,6 @@ namespace ConsolaAdministrador.Menu
             {
                 Console.WriteLine($"No se pudo agregar el genero :{e.Message}");
             }
-
             Console.ReadKey();
         }   
     }

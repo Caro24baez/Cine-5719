@@ -3,6 +3,7 @@ using Cine.Ado;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
+
 namespace TestAdoMySQLCore
 {
     [TestClass]
@@ -38,7 +39,6 @@ namespace TestAdoMySQLCore
 
             int num = unaSala.Piso;
             Assert.AreEqual(num, 1);
-
         }
     }
 }

@@ -65,7 +65,6 @@ namespace Cine.Ado
             SaveChanges();
         }
 
-
         public List<Proyeccion> obtenerProyecciones()
             => Proyecciones.
                 Include(p => p.Entradas).
@@ -111,7 +110,6 @@ namespace Cine.Ado
             return Salas.ToList();
 
         }
-
         public void actualizarEntrada(Proyeccion proyeccion)
         {
             throw new NotImplementedException();
@@ -120,7 +118,6 @@ namespace Cine.Ado
         }
 
         public List<Genero> obtenerGeneros() => Generos.ToList();
-
 
         public void actualizarProyeccion(Proyeccion proyeccion)
         {
@@ -141,6 +138,12 @@ namespace Cine.Ado
         public List<Proyeccion> ProyeccionesEn(Sala sala)
         {
             return Proyecciones.Where(x => x.Sala == sala).Include(p => p.Sala == sala).ToList();
+        }
+
+        public List<Entrada> EntradasEn(Proyeccion proyeccion)
+        {
+            return Entradas.Where(p => p.Proyeccion.Sala == proyeccion.Sala).ToList();
+                           
         }
     }
 }

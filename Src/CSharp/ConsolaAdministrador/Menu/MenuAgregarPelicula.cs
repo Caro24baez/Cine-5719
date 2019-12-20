@@ -30,18 +30,16 @@ namespace ConsolaAdministrador.Menu
                 Nombre = pelicula
             };
              try
-            {
+             {
                 AdoAdministrador.ADO.agregarPelicula(Pelicula);
                 Console.WriteLine("Pelicula agregado con exito");
-            }
+             }
             catch (Exception e)
-            {
+             {
                 Console.WriteLine($"No se pudo agregar la pelicula :{e.Message}");
-            }
+             }
 
             Console.ReadKey();
-
-
         }
     }
 }
