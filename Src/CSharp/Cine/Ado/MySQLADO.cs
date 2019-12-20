@@ -115,6 +115,8 @@ namespace Cine.Ado
         public void actualizarEntrada(Proyeccion proyeccion)
         {
             throw new NotImplementedException();
+            //Attach<>(proyeccion);
+            //SaveChanges();
         }
 
         public List<Genero> obtenerGeneros() => Generos.ToList();
