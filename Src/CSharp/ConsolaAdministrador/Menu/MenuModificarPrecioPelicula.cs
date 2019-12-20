@@ -8,7 +8,6 @@ namespace ConsolaAdministrador.Menu
 {
     public class MenuModificarPrecioPelicula : MenuListaPelicula
     {
-
         public Pelicula Pelicula { get; set; }
         public Proyeccion Proyeccion { get; set; }
         public MenuListaProyeccion menuListaProyeccion { get; set; } = new MenuListaProyeccion();
